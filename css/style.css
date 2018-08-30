@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Fjalla+One');
+
+* {
+    box-sizing: border-box;
+    word-break: break-all;
+    font-family: 'Oswald';
+}
+.corh{
+    color: #A4A4A4;
+}
+.cormoda{
+    color: #6E6E6E;
+}
+.meu-navbar{
+    color: #FFF;
+    background-color: black;
+}
+
+.wrapper{
+    width: 600px;
+    margin: auto;
+}
+
+.logo{
+    font-family: 'Fjalla';
+    font-size: 45px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #FFF;
+    font-family: 'Oswald';
+    font-size: 15px;
+    
+}
+
+.product img{
+    width: 100%;
+}
