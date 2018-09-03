@@ -28,7 +28,7 @@
 }
 .menu-link{
     color: #fff;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
 }
 #logo{
     padding-bottom: 0;
@@ -151,7 +151,43 @@ footer a:hover{
     height: 4px;
     background: #fff;
 }
+.nav-footer{
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 0.9em;
+}
+.col-footer{
+    width: 33%;
+    float: left;
+    height: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.col-footer ul{
+    list-style: none;
+}
+.col-footer ul li{
+    padding: 10px;
+}
+.col-footer ul li a{
+    color: #fff;
+}
+.faq-back{
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.faq-body{
+    background-color: #fff;
+    color: #000;
+}
 @media(max-width: 768px){
+    .col-footer{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
     .icons{
         display: block;
         cursor: pointer;
