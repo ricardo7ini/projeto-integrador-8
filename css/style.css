@@ -182,6 +182,14 @@ footer a:hover{
     background-color: #fff;
     color: #000;
 }
+.form-login{
+    width: 100%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
 @media(max-width: 768px){
     .col-footer{
         float: none;
