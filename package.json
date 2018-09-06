@@ -1,0 +1,25 @@
+{
+  "name": "projeto-integrador-8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardo7ini/projeto-integrador-8.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ricardo7ini/projeto-integrador-8/issues"
+  },
+  "homepage": "https://github.com/ricardo7ini/projeto-integrador-8#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-imagemin": "^4.1.0",
+    "jquery": "^3.3.1"
+  }
+}
