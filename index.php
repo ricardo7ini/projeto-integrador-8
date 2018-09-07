@@ -1,8 +1,8 @@
 <?php include('header.php'); ?>
-<div class="container">
+<div class="container-flud">
 				<div class="row">
 					<div class="col-xs-12">
-						
+
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 								<ol class="carousel-indicators">
@@ -24,7 +24,7 @@
 									<div class="item">
 										<img src="imagens/2.jpg" alt="Modelo2" style="width:100%;">
 									</div>
-								
+
 									<div class="item">
 										<img src="imagens/3.jpg" alt="Modelo3" style="width:100%;">
 									</div>
@@ -57,11 +57,11 @@
 		</div>
 		<div>
 		</div>
-		
-		<div class="container">
+
+		<div class="container-fluid">
 		<div class="row">
-		<h1 class="text-center cormoda">MODA</h1>	
-	
+		<h1 class="text-center cormoda">MODA</h1>
+
 
 		<!--<div class="container">-->
 			<div class="vip-product">
@@ -99,9 +99,9 @@
 			<li><a href="faq.html">FAQ</a></li>
 			<li><a href="#">Contato</a></li>
 			<li><a href="#">Trabalhe Conosco</a></li>
-		</ul> 						
+		</ul>
 	</div>
-	<div style="clear:both;"></div>			
+	<div style="clear:both;"></div>
 </div>
 
 <?php include('footer.php'); ?>

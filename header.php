@@ -14,17 +14,17 @@
 
 
 			<link rel="stylesheet" href="css/style.css">
-</head> 
+</head>
 
 <body>
-	<div class="container">
+
 			      <nav class="nav-menu">
 	    		        <ul class="menu">
 	    		            <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
 	    		            <li class="menu-item"><a class="menu-link" href="#">Produtos</a></li>
 	    		            <li class="menu-item">
 													<div class="div-logo" id="logo">
-													<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>
+													<a class="menu-link" href="index.php"><h1 class="logo">HOLLY!</h1></a>
 												 </div>
 											</li>
 	    		            <li class="menu-item"><a class="menu-link" href="#">Categoria</a></li>
@@ -46,4 +46,4 @@
 	    		            <li class="menu-item-mobil"><a class="menu-link" href="#">Contato</a></li>
 	    		        </ul>
 						</nav>
-			</div>
+	
