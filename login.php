@@ -1,7 +1,37 @@
-<?php include('header.php'); ?>
-<main>
+
+<?php include('testando.php'); ?>
+<?php
+  if($_POST){
+    if(file_exists('login.json')){
+      $dados = json_decode(file_get_contents('login.json'), true);
+    }else{
+      $dados = [ "usuarios" => [] ];
+    }
+    if($_POST['senha'] == $_POST['confirma-senha']){
+      $usuario = [
+        "email" => $_POST['email'],
+        "nome"  => $_POST['nome'],
+        "sobrenome" => $_POST['sobrenome'],
+        "nascimento" => $_POST['datan'],
+        "rg" => $_POST['rg'],
+        "rua" => $_POST['rua'],
+        "cpf" => $_POST['cpf'],
+        "numeror" => $_POST['numeror'],
+        "bairro" => $_POST['bairro'],
+        "estado" => $_POST['estado'],
+        "cidade" => $_POST['cidade'],
+        "cep" => $_POST['cep'],
+        "login" => $_POST['login'],
+        "hash" => password_hash($_POST['senha'], PASSWORD_DEFAULT)
+      ];
+      $dados['usuarios'][] = $usuario;
+      $json = json_encode($dados);
+      file_put_contents('login.json', $json);
+    }
+  }
+  ?>
 <div class="container">
-<form class="text-center" action="login.html" method="post" enctype="multipart/form-data">            
+<form class="text-center" action="login.php" method="post" enctype="multipart/form-data">            
 
  <div class="form-box">
     <!-- DADOS PESSOAIS-->
@@ -13,7 +43,7 @@
                             <label for="nome">Nome: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="email">
+                            <input type="text" name="nome">
                             </td>
                             <td>
                             <label for="sobrenome">Sobrenome: </label>
@@ -27,9 +57,7 @@
                             <label>Nascimento: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
-                            <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
-                            <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+                            <input type="text" name="datan" value="">
                             </td>
                             </tr>
                             <tr>
@@ -67,7 +95,7 @@
                     <label for="numero">Numero:</label>
                     </td>
                     <td align="left">
-                    <input type="text" name="numero" size="4">
+                    <input type="text" name="numeror" size="4">
                     </td>
                     </tr>
                     <tr>
@@ -167,7 +195,7 @@
                        <label for="pass">Senha: </label>
                       </td>
                       <td align="left">
-                       <input type="password" name="pass">
+                       <input type="password" name="senha">
                       </td>
                      </tr>
                      <tr>
@@ -175,7 +203,7 @@
                        <label for="passconfirm">Confirme a senha: </label>
                       </td>
                       <td align="left">
-                       <input type="password" name="passconfirm">
+                       <input type="password" name="confirma-senha">
                       </td>
                      </tr>
                     </table>
@@ -200,7 +228,7 @@
     </div>
 </div>
 
-<form class="text-center" action="login.html" method="post">            
+<form class="text-center" action="valida-login.php" method="post">            
 
     <div class="form-login">
        <!-- DADOS PESSOAIS-->
@@ -219,13 +247,13 @@
                                 <label for="pass">Senha: </label>
                                 </td>
                                 <td align="left">
-                                <input type="password" name="pass">
+                                <input type="password" name="senha">
                                 </td>
                                 </tr>
                                 <tr>
                            </table>
+                           <input type="submit" value="Enviar">
                        </fieldset>
                        </div></form>
-</main>
 
 <?php include('footer.php'); ?>
