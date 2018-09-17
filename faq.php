@@ -1,3 +1,4 @@
+<?php include('header.php'); ?>
 <main>
 
         <div class="container ">
@@ -70,3 +71,4 @@
             <!--/panel-group-->
         </div>
    </main>
+   <?php include('footer.php'); ?>
