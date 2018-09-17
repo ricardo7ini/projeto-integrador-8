@@ -28,25 +28,27 @@
 		      <div class="modal-body">
 
 		        <!-- Início do Corpo do Modal -->
-		        <div class="col-lg-12 col-md-12 col-sm-12">
-		        	<div class="col-lg-7 col-md-7 col-lg-6">
-		        		<label>Usuário</label>
-		        		<input type="text"name="usuario" class="form-control" value="">
-		        	</div>
-		        </div>
+		        <form class="text-center" action="valida-login.php" method="post">
+			        <div class="col-lg-12 col-md-12 col-sm-12">
+			        	<div class="col-lg-7 col-md-7 col-lg-6">
+			        		<label>Usuário</label>
+			        		<input type="text" name="email">
+			        	</div>
+			        </div>
+		         
+			        <div class="col-lg-12 col-md-12 col-sm-12">
+			        	<div class="col-lg-7 col-md-7 col-lg-6">
+			        		<label>Senha</label>
+			        		<input type="password" name="senha">
+			        	</div>
+			        </div>
 
-		        <div class="col-lg-12 col-md-12 col-sm-12">
-		        	<div class="col-lg-7 col-md-7 col-lg-6">
-		        		<label>Senha</label>
-		        		<input type="text"name="senha" class="form-control" value="">
-		        	</div>
-		        </div>
-
-		        <div class="col-lg-12 col-md-12 col-sm-12">
-		        	<div class="col-lg-2 col-md-7 col-lg-6">
-		        		<input type="submit" class="btn btn-primary form-control" name="logar" value="Logar">
-		        	</div>
-		        </div>
+			        <div class="col-lg-12 col-md-12 col-sm-12">
+			        	<div class="col-lg-2 col-md-7 col-lg-6">
+			        		<input type="submit" class="btn btn-primary form-control" value="Enviar">
+			        	</div>
+			        </div>
+			    </form>
 		        <!-- Fim do Corpo do Modal -->
 
 		      </div>

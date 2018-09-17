@@ -30,6 +30,17 @@
     }
   }
   ?>
+  <?php
+if(isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == UPLOAD_ERR_OK){
+  $file_to = "uploads/".$_FILES['arquivo']['name'];
+  if(file_exists($file_to)){
+      echo "ERRO: Arquivo já existe!";
+  }else{
+    $ok = move_uploaded_file($_FILES['arquivo']['tmp_name'], $file_to);
+    if($ok) { echo "Arquivo enviado com sucesso!"; }
+  }
+}
+?>
 <div class="container">
 <form class="text-center" action="login.php" method="post" enctype="multipart/form-data">            
 
@@ -43,13 +54,13 @@
                             <label for="nome">Nome: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="nome">
+                            <input type="text" name="nome" value='<?php echo isset($_POST['nome'])?$_POST['nome']:''; ?>'>
                             </td>
                             <td>
                             <label for="sobrenome">Sobrenome: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="sobrenome">
+                            <input type="text" name="sobrenome" value='<?php echo isset($_POST['sobrenome'])?$_POST['sobrenome']:''; ?>'>
                             </td>
                             </tr>
                             <tr>
@@ -57,7 +68,7 @@
                             <label>Nascimento: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="datan" value="">
+                            <input type="text" name="datan" value='<?php echo isset($_POST['data'])?$_POST['data']:''; ?>'>
                             </td>
                             </tr>
                             <tr>
@@ -65,7 +76,7 @@
                             <label for="rg">RG: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="rg" size="13" maxlength="13"> 
+                            <input type="text" name="rg" size="13" maxlength="13" value='<?php echo isset($_POST['rg'])?$_POST['rg']:''; ?>'> 
                             </td>
                             </tr>
                             <tr>
@@ -89,13 +100,13 @@
                     <label for="rua">Rua:</label>
                     </td>
                     <td align="left">
-                    <input type="text" name="rua">
+                    <input type="text" name="rua" value='<?php echo isset($_POST['rua'])?$_POST['rua']:''; ?>'>
                     </td>
                     <td>
                     <label for="numero">Numero:</label>
                     </td>
                     <td align="left">
-                    <input type="text" name="numeror" size="4">
+                    <input type="text" name="numeror" size="4" value='<?php echo isset($_POST['numeror'])?$_POST['numeror']:''; ?>'>
                     </td>
                     </tr>
                     <tr>
@@ -103,7 +114,7 @@
                     <label for="bairro">Bairro: </label>
                     </td>
                     <td align="left">
-                    <input type="text" name="bairro">
+                    <input type="text" name="bairro" value='<?php echo isset($_POST['bairro'])?$_POST['bairro']:''; ?>'>
                     </td>
                     </tr>
                     <tr>
@@ -147,7 +158,7 @@
                     <label for="cidade">Cidade: </label>
                     </td>
                     <td align="left">
-                    <input type="text" name="cidade">
+                    <input type="text" name="cidade" value='<?php echo isset($_POST['cidade'])?$_POST['cidade']:''; ?>'>
                     </td>
                     </tr>
                     <tr>
@@ -170,7 +181,7 @@
                        <label for="email">E-mail: </label>
                       </td>
                       <td align="left">
-                       <input type="text" name="email">
+                       <input type="text" name="email" value='<?php echo isset($_POST['email'])?$_POST['email']:''; ?>'>
                       </td>
                      </tr>
                      <tr>
@@ -178,7 +189,7 @@
                        <label for="imagem">Imagem de perfil:</label>
                       </td>
                       <td>
-                       <input type="file" name="imagem" >
+                       <input type="file" name="arquivo" >
                    
                       </td>
                      </tr>
@@ -187,7 +198,7 @@
                        <label for="login">Login de usuário: </label>
                       </td>
                       <td align="left">
-                       <input type="text" name="login">
+                       <input type="text" name="login" value='<?php echo isset($_POST['login'])?$_POST['login']:''; ?>'>
                       </td>
                      </tr>
                      <tr>
