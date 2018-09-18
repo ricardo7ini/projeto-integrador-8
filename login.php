@@ -45,30 +45,30 @@ if(isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == UPLOAD_ERR_OK){
 <form class="text-center" action="login.php" method="post" enctype="multipart/form-data">            
 
  <div class="form-box">
-    <!-- DADOS PESSOAIS-->
+    <!-- DADOS PESSOAIS -->
                 <fieldset>
                         <legend class="legenda">Dados Pessoais</legend>
                         <table cellspacing="10">
                             <tr>
                             <td>
-                            <label for="nome">Nome: </label>
+                            <label for="nome">Nome completo: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="nome" value='<?php echo isset($_POST['nome'])?$_POST['nome']:''; ?>'>
+                            <input type="text" require name="nome" value='<?php echo isset($_POST['nome'])?$_POST['nome']:''; ?>'>
                             </td>
                             <td>
-                            <label for="sobrenome">Sobrenome: </label>
+                            <!--<label for="sobrenome">Sobrenome: </label>
                             </td>
                             <td align="left">
                             <input type="text" name="sobrenome" value='<?php echo isset($_POST['sobrenome'])?$_POST['sobrenome']:''; ?>'>
-                            </td>
+                            </td>-->
                             </tr>
                             <tr>
                             <td>
-                            <label>Nascimento: </label>
+                            <label>Data de nascimento: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="datan" value='<?php echo isset($_POST['data'])?$_POST['data']:''; ?>'>
+                            <input type="text" require require name="datan" value='<?php echo isset($_POST['data'])?$_POST['data']:''; ?>'>
                             </td>
                             </tr>
                             <tr>
@@ -81,10 +81,10 @@ if(isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == UPLOAD_ERR_OK){
                             </tr>
                             <tr>
                             <td>
-                            <label>CPF:</label>
+                            <label>CPF: </label>
                             </td>
                             <td align="left">
-                            <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+                            <input type="text" require name="cpf" size="13" maxlength="11">
                             </td>
                             </tr>
                         </table>
@@ -97,16 +97,16 @@ if(isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == UPLOAD_ERR_OK){
                     <table cellspacing="10">
                     <tr>
                     <td>
-                    <label for="rua">Rua:</label>
+                    <label for="rua">Rua: </label>
                     </td>
                     <td align="left">
                     <input type="text" name="rua" value='<?php echo isset($_POST['rua'])?$_POST['rua']:''; ?>'>
                     </td>
                     <td>
-                    <label for="numero">Numero:</label>
+                    <label for="numero">Número:</label>
                     </td>
                     <td align="left">
-                    <input type="text" name="numeror" size="4" value='<?php echo isset($_POST['numeror'])?$_POST['numeror']:''; ?>'>
+                    <input type="text" require name="numeror" size="4" value='<?php echo isset($_POST['numeror'])?$_POST['numeror']:''; ?>'>
                     </td>
                     </tr>
                     <tr>
