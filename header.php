@@ -50,44 +50,56 @@
 			        </div>
 			    </form>
 		        <!-- Fim do Corpo do Modal -->
-
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-		      </div>
-		    </div>
-		  </div>
-		</div>
+					</div>
+							</div>
+						</div>
+					</div>
 
-      	<nav class="nav-menu">
-	        <ul class="menu">
-	            <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
-	            <li class="menu-item"><a class="menu-link" href="#">Produtos</a></li>
-	            <li class="menu-item">
-					<div class="div-logo" id="logo">
-						<a class="menu-link" href="index.php"><h1 class="logo">HOLLY!</h1></a>
-					 </div>
-				</li>
-	            <li class="menu-item"><a class="menu-link" href="#">Categoria</a></li>
-	            <li class="menu-item"><a class="menu-link" href="#">Contato</a></li>
-			</ul>
-			<div class="icon">
-				<!-- Início Botão Modal -->
-				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-					Login <i class="fas fa-user-alt icon-stilo" onclick=""></i>
-				</button>
-				<!-- Fim Botão Modal -->
-				<i class="fas fa-shopping-cart fa-2x icon-stilo" onclick=""></i>	
-			</div>
-			<ul class="menu-mobil">
+<nav class="nav-menu">
+	<ul class="menu">
+		<li class="menu-item"><a class="menu-link" href="#">Home</a></li>
+		<li class="menu-item">
 				<div class="div-logo" id="logo">
-					<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>
+					<a class="menu-link" href="index.php"><h1 class="logo">HOLLY!</h1></a>
 				</div>
-				<div class="icons" onclick=""><i class="fas fa-bars  fa-2x"></i></div>
-					<li class="menu-item-mobil"><a class="menu-link" href="#">Home</a></li>
-		            <li class="menu-item-mobil"><a class="menu-link" href="#">Produtos</a></li>
-		            <li class="menu-item-mobil"><a class="menu-link" href="#">Categoria</a></li>
-		            <li class="menu-item-mobil"><a class="menu-link" href="#">Contato</a></li>
-		        </div>
-	        </ul>
-		</nav>
+		</li>
+		<li class="menu-item"><a class="menu-link" href="#">Contato</a></li>
+	</ul>
+	<div class="icon">
+		<!-- Início Botão Modal -->
+		<button type="button" class="btn btn-primary btn-primary-custom" data-toggle="modal" data-target="#exampleModal">
+		Login <i class="fas fa-user-alt icon-stilo" onclick=""></i>
+		</button>
+		<!-- Fim Botão Modal -->
+		<i class="fas fa-shopping-cart fa-2x icon-stilo" onclick=""></i>	
+	</div>
+		
+	<ul class="menu-mobil">
+		<div class="div-logo" id="logo">
+		<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>
+		</div>
+		<div class="icons" onclick=""><i class="fas fa-bars  fa-2x"></i></div>
+		<li class="menu-item-mobil"><a class="menu-link" href="#">Home</a></li>
+		<li class="menu-item-mobil"><a class="menu-link" href="#">Produtos</a></li>
+		<li class="menu-item-mobil"><a class="menu-link" href="#">Categoria</a></li>
+		<li class="menu-item-mobil"><a class="menu-link" href="#">Contato</a></li>
+		</div>
+	</ul>
+</nav>
+
+<nav class="navbar navbar-default navbar-custom">
+  <div class="container">
+    <ul class="nav navbar-nav nav-custom">
+      <li class="link col-lg-2 col-md-2 col-sm-12 um"><a href="#">FEMININO</a></li>
+      <li class="link col-lg-2 col-md-2 col-sm-12 dois"><a href="#">MASCULINO</a></li>
+      <li class="link col-lg-2 col-md-2 col-sm-12 tres"><a href="#">INFANTIL</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a href="#">ESPORTE</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a href="#">INSPIRAÇÃO</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 six"><a href="#">OUTLET</a></li>
+			<hr />
+    </ul>
+  </div>
+</nav>

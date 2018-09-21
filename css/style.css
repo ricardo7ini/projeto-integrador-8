@@ -1,12 +1,50 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
+/*
+cores principais 
+cor: #f09b1a laranja(seila)
+cor: #000 (preto)
+cor: #fff (branco)
+*/
 * {box-sizing: border-box;word-break: break-all;font-family: 'Oswald';font-size: 100%;margin: 0;padding: 0;}
-.corh{color: #000;}
+.categorias-box{
+    position: absolute;
+    width: 100%;
+   
+}
+.categorias-box > ul{
+    list-style: none;
+}
+.categorias-box > ul > li > a{
+
+    text-align: center;
+}
+.categoria-text{
+    display: block;
+    color: #fff;
+    text-align: center;
+   
+}
+.categoria-text:hover{
+    color: #f09b1a;
+    text-decoration: none;
+}
+
+.box-link{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+}
+.box-link:hover{
+    color: #f09b1a;
+    text-decoration: none;
+}
 .cormoda{color: #000;}
 
 .nav-menu{
     color: #FFF;
-    background-color: black;
+    background-color: #000;
     width: 100%;
     height: 60px;
     max-height: 100%;
@@ -40,6 +78,15 @@
   position: relative;
   display: block;
 }
+.btn-primary-custom{
+    background-color: #0000;
+    border: none;
+    border-radius: 0;
+    height: 100%;
+}
+.btn-primary-custom:hover{
+    background-color: #166192;
+}
 /* MENU PARA MOBILE*/
 
 .wrapper{
@@ -63,10 +110,18 @@
     font-size: 15px;
 
 }
-
+.product{
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .product img{
     width: 100%;
 }
+
 footer{
     background-color:#000;
     display: flex;
@@ -76,6 +131,7 @@ footer{
     max-height: 60px;
     list-style: none;
 }
+
 footer a{
     color: #ffffff;
 }
@@ -98,10 +154,75 @@ footer a:hover{
     display: inline-block;
     position: absolute;
     right: 2%;
+    height: 100%;
 }
 .icon-login{
     text-decoration: none;
     color: #fff;
+}
+/***********************************
+    Estilo do menu de categorias
+************************************/
+.navbar-custom{
+    min-height: 20px;
+    border: none;
+    margin: 0;
+}
+.link{
+
+    text-align: center;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a{
+
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    display: inline-block;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: #333;
+   
+}
+.nav-custom{
+    width: 100%;
+} 
+.linha-nav{
+    width: 25%;
+  
+}
+
+.fixed-menu {
+   position:fixed;
+   z-index:9999;
+}
+/*******************
+    Estilo do linha
+********************/
+.dois:hover ~ hr {
+    margin-left: 16.6%;
+}
+.tres:hover ~ hr {
+    margin-left: 33.2%;
+}
+.quatro:hover ~ hr {
+    margin-left: 49.8%;
+}
+.cinco:hover ~ hr {
+    margin-left: 66.4%;
+}
+.six:hover ~ hr {
+    margin-left: 83%;
+}
+hr {
+    position: relative;
+    height: .20rem;
+    width: 16.6%;
+    margin: 0;
+    background: #f09b1a;
+    border: none;
+    transition: .3s ease-in-out;
 }
 /*tela de login scc*/
 .title{
@@ -110,6 +231,7 @@ footer a:hover{
     position: relative;
     background-color: #000;
 }
+
 .campo1{
     display: flex;
     width: 100%;
@@ -190,6 +312,34 @@ footer a:hover{
     align-items: center;
     height: 250px;
 }
+.vip-product{
+    margin-top: 30px;
+    position: relative;
+}
+.sobre{
+    height: auto;
+}
+.titulo-sobre{
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-style: italic;
+    font-family: 'roboto',sans-serif;
+    border-bottom: solid 1px #999;
+    border-top: solid 1px #999;
+}
+.sobre-text{
+    font-family: 'roboto',sans-serif;
+    font-family: 12px;
+    margin-bottom: 30px;
+}
+.cupom{
+    background: #ddddddd1;
+}
 @media(max-width: 768px){
     .col-footer{
         float: none;
@@ -210,8 +360,8 @@ footer a:hover{
 
     }
     .nav-menu{
-        color: #FFF;
-        background-color: black;
+        
+        
         width: 100%;
         height: auto;
         margin-bottom: 2.5%;
