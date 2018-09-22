@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Fjalla+One');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /*
 cores principais 
@@ -7,39 +8,11 @@ cor: #f09b1a laranja(seila)
 cor: #000 (preto)
 cor: #fff (branco)
 */
-* {box-sizing: border-box;word-break: break-all;font-family: 'Oswald';font-size: 100%;margin: 0;padding: 0;}
-.categorias-box{
-    position: absolute;
-    width: 100%;
-   
-}
-.categorias-box > ul{
-    list-style: none;
-}
-.categorias-box > ul > li > a{
+* {box-sizing: border-box;word-break: break-all;font-family: 'roboto';font-size: 100%;margin: 0;padding: 0;}
 
-    text-align: center;
-}
-.categoria-text{
-    display: block;
-    color: #fff;
-    text-align: center;
-   
-}
-.categoria-text:hover{
-    color: #f09b1a;
-    text-decoration: none;
-}
 
-.box-link{
-    display: block;
-    color: #fff;
-    font-size: 16px;
-}
-.box-link:hover{
-    color: #f09b1a;
-    text-decoration: none;
-}
+
+
 .cormoda{color: #000;}
 
 .nav-menu{
@@ -110,6 +83,8 @@ cor: #fff (branco)
     font-size: 15px;
 
 }
+
+/* Categorias produtos css */
 .product{
     position: relative;
     margin-top: 30px;
@@ -117,10 +92,45 @@ cor: #fff (branco)
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .product img{
     width: 100%;
 }
+.product .img-categoria{
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);  
+}
+
+.product .img-categoria:hover{
+    box-shadow: 0px 0px 150px #000000;
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+.product .img-categoria-custom:hover{
+    box-shadow: none;
+}
+.img-costa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-height: 270px;
+    left: 0;
+}
+
 
 footer{
     background-color:#000;
@@ -340,7 +350,133 @@ hr {
 .cupom{
     background: #ddddddd1;
 }
+.carousel-inner-custom{
+    max-height: 296px;
+    
+}
+.carousel-control-custom{
+    background-color: none;
+}
+.glyphicon-custom{
+    background-color: #000;
+}
+.title-lancamento{
+    color: #000;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+.title-lancamento>a{
+    color: #6E6E6E;
+    font-size: 30px;
+}.title-lancamento>a:hover{
+    text-decoration: none;
+    color: #000;
+}
+
+.title-lancamento::after{
+    content: "";
+    background: #9f9f9f;
+    width: 93px;
+    height: 3px;
+    display: block;
+    margin: 15px auto;
+    margin-bottom: 30px;
+}
+.lista-lancamento{
+    list-style: none;
+}
+.lista-lancamento>li{
+    display: inline-block;
+}
+.banner-desck{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.lista-produtos{
+    list-style: none;
+}
+.produto-box{
+    height: 510px;
+    border: solid 3px #0000;
+
+    position: relative;
+    overflow: hidden;
+}
+.produto-box:hover{
+    border: solid 3px #00000036;
+
+}
+.produto-box:hover>.produto-img{
+    z-index: 0;
+}
+.produto-box:hover>div{
+    opacity: 0.5;
+}
+.produto-img{
+    position: relative;
+    width: 100%;
+    max-height: 270px;
+    z-index: 1;
+}
+  
+.produto-descricao{
+    width: 90%;
+    margin: 0 auto;
+}
+.nome-produto{
+    font-size: 20px;
+    font-weight: bold;
+}
+.nome-produto>a{
+    color: #000;
+}
+.nome-produto>a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.valor-total{
+    font-size: 30px;
+}
+.parcela-valor{
+    font-size: 14px;
+}
+.parcela-valor>span{
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+.comprar-produto{
+    
+    background-color: #000;
+    margin-top: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 600;
+    height: 50px;
+    cursor: pointer;
+}.comprar-produto>a{
+    color: #fff;
+    
+}
+
+.comprar-produto>a:hover{
+    text-decoration: none;
+}
+.banner-produto-destaque{
+    list-style: none;
+}
+.img-categoria-banner{
+    max-height: 250px;
+}
 @media(max-width: 768px){
+    .banner-desck{
+        display: none;
+    }
     .col-footer{
         float: none;
         width: 100%;
