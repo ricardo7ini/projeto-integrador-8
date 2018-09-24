@@ -40,12 +40,16 @@ cor: #fff (branco)
     color: #fff;
     padding-bottom: 0px;
 }
+.btn-primary.focus, .btn-primary:focus{
+    background-color: #fff;
+    color: #000;
+}
 #logo{
     padding-bottom: 0;
 }
 .menu-link:hover{
     text-decoration: none;
-    color: #fff0b8;
+    color: #fff;
 }
 .menu-item> .logo{
   position: relative;
@@ -58,7 +62,8 @@ cor: #fff (branco)
     height: 100%;
 }
 .btn-primary-custom:hover{
-    background-color: #166192;
+    background-color: #fff;
+    color: #000;
 }
 /* MENU PARA MOBILE*/
 
@@ -132,30 +137,10 @@ cor: #fff (branco)
 }
 
 
-footer{
-    background-color:#000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    max-height: 60px;
-    list-style: none;
-}
 
-footer a{
-    color: #ffffff;
-}
 
-footer a:hover{
-    text-decoration: none;
-    color: #6E6E6E;
-}
-.icons{
-    display: none;
-    position: relative;
-    text-align: center;
 
-}
+
 
 .menu-mobil{
     display: none;
@@ -283,29 +268,8 @@ hr {
     height: 4px;
     background: #fff;
 }
-.nav-footer{
-    background-color: #2b2b2b;
-    color: #fff;
-    font-size: 0.9em;
-}
-.col-footer{
-    width: 33%;
-    float: left;
-    height: auto;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-.col-footer ul{
-    list-style: none;
-}
-.col-footer ul li{
-    padding: 10px;
-}
-.col-footer ul li a{
-    color: #fff;
-}
+
+
 .faq-back{
     background-color: #000 !important;
     color: #fff !important;
@@ -447,8 +411,8 @@ hr {
     color: #000;
     font-size: 16px;
 }
-.comprar-produto{
-    
+.btn-vermais{
+    cursor: pointer;
     background-color: #000;
     margin-top: 8px;
     width: 100%;
@@ -473,14 +437,93 @@ hr {
 .img-categoria-banner{
     max-height: 250px;
 }
+/* NEWSLETER*/
+.home-newsletter {
+    padding: 80px 0;
+    background: #fff;
+    }
+    
+    .home-newsletter .single {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+    .home-newsletter .single h2 {
+    font-size: 22px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 40px; }
+    .home-newsletter .single .form-control {
+    height: 50px;
+    background: rgba(255, 255, 255, 0.6);
+    border-color: #0000007d;
+    border-radius: 20px 0 0 20px; }
+    .home-newsletter .single .form-control:focus {
+    box-shadow: none;
+    border-color: #243c4f; }
+    .home-newsletter .single .btn {
+    min-height: 50px; 
+    /* border-radius: 0 20px 20px 0; */
+    background: #000;
+    color: #fff;
+    }
+    /*ESTILO FOOTER*/
+    footer{
+        width: 100%;
+        background-color:#fff;
+        height: auto;
+        list-style: none;
+    }
+    .list-footer{
+        list-style: none;
+    }
+    .list-footer li a{
+        color: #6E6E6E;
+        font-family: 'Montserrat';
+    }
+    .list-footer li a:hover{
+        text-decoration: none;
+        color: #333;
+    }
+    .title-footer{
+        font-family: 'Montserrat';
+        color: #000;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+    .copy{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        height: 40px;
+        width: 100%;
+        
+    }
+    .copy a{
+        color: #fff;
+    }
+    .copy a:hover{
+        text-decoration: none;
+    }
+    .img-footer{
+        height: 250px;
+    }
 @media(max-width: 768px){
     .banner-desck{
         display: none;
     }
-    .col-footer{
-        float: none;
-        width: 100%;
-        text-align: center;
+    .nav-custom{
+        width: auto;
+    }
+    .btn-primary.focus, .btn-primary:focus{
+        background-color: #000;
+    }
+    .btn-primary.focus, .btn-primary:focus:hover{
+        background-color: #fff;
+        color: #000;
     }
     .icons{
         display: block;
@@ -493,6 +536,7 @@ hr {
         top: 27px;
         justify-content: center;
         align-items: center;
+        top: 0;
 
     }
     .nav-menu{

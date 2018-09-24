@@ -20,4 +20,8 @@ alturaImg = $('.imgTopo').height(); // altura da imagem, vai servir para sabermo
               $('#navbar').removeClass('fixed-menu');
           }
      });
-
+$(document).ready(function(){
+    $("#zoom_09").elevateZoom({
+        easing : true
+    });
+});

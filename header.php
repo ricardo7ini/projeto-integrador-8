@@ -12,6 +12,7 @@
 		<!-- Use Font Awesome's  -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/compra-style.css"><!-- Só carrega esse estilo se for a pagina comprar.php -->
 	</head>
 	<body>
 
@@ -81,10 +82,8 @@
 		<div class="div-logo" id="logo">
 		<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>
 		</div>
-		<div class="icons" onclick=""><i class="fas fa-bars  fa-2x"></i></div>
+		<div class="icons" onclick=""><i class="fas fa-bars  fa-2x icon-stilo"></i></div>
 		<li class="menu-item-mobil"><a class="menu-link" href="#">Home</a></li>
-		<li class="menu-item-mobil"><a class="menu-link" href="#">Produtos</a></li>
-		<li class="menu-item-mobil"><a class="menu-link" href="#">Categoria</a></li>
 		<li class="menu-item-mobil"><a class="menu-link" href="#">Contato</a></li>
 		</div>
 	</ul>
@@ -93,12 +92,12 @@
 <nav class="navbar navbar-default navbar-custom">
   <div class="container">
     <ul class="nav navbar-nav nav-custom">
-      <li class="link col-lg-2 col-md-2 col-sm-12 um"><a href="#">FEMININO</a></li>
-      <li class="link col-lg-2 col-md-2 col-sm-12 dois"><a href="#">MASCULINO</a></li>
-      <li class="link col-lg-2 col-md-2 col-sm-12 tres"><a href="#">INFANTIL</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a href="#">ESPORTE</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a href="#">INSPIRAÇÃO</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 six"><a href="#">OUTLET</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 um"><a class="text-center" href="#">FEMININO</a></li>
+      <li class="link col-lg-2 col-md-2 col-sm-12 dois"><a class="text-center" href="#">MASCULINO</a></li>
+      <li class="link col-lg-2 col-md-2 col-sm-12 tres"><a class="text-center" href="#">INFANTIL</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a class="text-center" href="#">ESPORTE</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a class="text-center" href="#">INSPIRAÇÃO</a></li>
+			<li class="link col-lg-2 col-md-2 col-sm-12 six"><a class="text-center" href="#">OUTLET</a></li>
 			<hr />
     </ul>
   </div>
