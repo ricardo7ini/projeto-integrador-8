@@ -9,7 +9,7 @@
 
 	<section class="home-newsletter">
 		<div class="container">
-			< div class="row">
+			<div class="row">
 				<div class="col-sm-12">
 					<div class="single">
 						<h2>RECEBA NOSSAS OFERTAS POR E-MAIL</h2>

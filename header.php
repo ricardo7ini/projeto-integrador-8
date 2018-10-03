@@ -14,16 +14,21 @@ if(Mysqli_connect_errno())//0 = não tem erro, logo não mostra nada na tela
 }
 
  ?>
+
 <?php
 	//passo 3 - criando uma consulta
-	$consulta_categoria = "SELECT * FROM categoria";
+	$consulta_categoria = "SELECT nome_categoria FROM categoria";
 	$categorias = mysqli_query($conecta,$consulta_categoria);
+
 	if(!$categorias)
 	{
 		die("Falha na consulta ao Banco.");
 	}
-	
+
+
 ?>
+
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -121,12 +126,44 @@ if(Mysqli_connect_errno())//0 = não tem erro, logo não mostra nada na tela
 <nav class="navbar navbar-default navbar-custom">
   <div class="container">
     <ul class="nav navbar-nav nav-custom">
-			<li class="link col-lg-2 col-md-2 col-sm-12 um"><a class="text-center" href="#">FEMININO</a></li>
-      <li class="link col-lg-2 col-md-2 col-sm-12 dois"><a class="text-center" href="#">MASCULINO</a></li>
-      <li class="link col-lg-2 col-md-2 col-sm-12 tres"><a class="text-center" href="#">INFANTIL</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a class="text-center" href="#">ESPORTE</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a class="text-center" href="#">INSPIRAÇÃO</a></li>
-			<li class="link col-lg-2 col-md-2 col-sm-12 six"><a class="text-center" href="#">OUTLET</a></li>
+			<?php
+				while($registro = mysqli_fetch_assoc($categorias))
+				{
+					foreach ($registro as $value)
+					{
+						if($value == 'masculino')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 um"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+
+						if($value == 'feminino')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 dois"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+
+						if($value == 'infantil')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 tres"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+
+						if($value == 'esporte')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+
+						if($value == 'inspiracao')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+
+						if($value == 'outlet')
+						{
+								echo '<li class="link col-lg-2 col-md-2 col-sm-12 six"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
+						}
+					}
+				}
+			 ?>
+
 			<hr />
     </ul>
   </div>
