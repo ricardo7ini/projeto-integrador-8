@@ -1,3 +1,30 @@
+<?php
+/*
+	CONEXÃO COM O BANCO DE DADOS
+	Mysqli_connect("servidor","usuario","senha","nome do banco"); ---> função pré definida que conecta o banco de dados <--
+*/
+//passo 1 - conectando ao banco de dados
+$conecta = Mysqli_connect("localhost","root","","holly");
+
+
+//passo 2 - testar coneexao
+if(Mysqli_connect_errno())//0 = não tem erro, logo não mostra nada na tela
+{
+	die("Conexão falhou: ".Mysqli_connect_errno());
+}
+
+ ?>
+<?php
+	//passo 3 - criando uma consulta
+	$consulta_categoria = "SELECT * FROM categoria";
+	$categorias = mysqli_query($conecta,$consulta_categoria);
+	if(!$categorias)
+	{
+		die("Falha na consulta ao Banco.");
+	}
+	
+?>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -12,7 +39,9 @@
 		<!-- Use Font Awesome's  -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/compra-style.css"><!-- Só carrega esse estilo se for a pagina comprar.php -->
+		<!-- Só carrega esse estilo se for a pagina comprar.php -->
+		<link rel="stylesheet" href="css/compra-style.css">
+
 	</head>
 	<body>
 
@@ -36,7 +65,7 @@
 			        		<input type="text" name="email">
 			        	</div>
 			        </div>
-		         
+
 			        <div class="col-lg-12 col-md-12 col-sm-12">
 			        	<div class="col-lg-7 col-md-7 col-lg-6">
 			        		<label>Senha</label>
@@ -75,9 +104,9 @@
 		Login <i class="fas fa-user-alt icon-stilo" onclick=""></i>
 		</button>
 		<!-- Fim Botão Modal -->
-		<i class="fas fa-shopping-cart fa-2x icon-stilo" onclick=""></i>	
+		<i class="fas fa-shopping-cart fa-2x icon-stilo" onclick=""></i>
 	</div>
-		
+
 	<ul class="menu-mobil">
 		<div class="div-logo" id="logo">
 		<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>

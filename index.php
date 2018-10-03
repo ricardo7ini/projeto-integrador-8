@@ -27,7 +27,7 @@
       <a class="right carousel-control carousel-control-custom" href="#myCarousel" data-slide="next">
       <span class="glyphicon glyphicon-chevron-right glyphicon-custom"></span>
       <span class="sr-only">Next</span>
-      </a>			
+      </a>
    </div>
    <!-- FIM myCarousel -->
 </div>
@@ -103,7 +103,7 @@
 			 </div>
 			 </div>
 		  </li>
-		  
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -140,7 +140,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -177,7 +177,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -251,7 +251,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -288,7 +288,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -325,7 +325,7 @@
 			 </div>
 			 </div>
 		  </li>
-		  
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -399,7 +399,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -436,7 +436,7 @@
 			 </div>
 			 </div>
 		  </li>
-		 
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -473,7 +473,7 @@
 			 </div>
 			 </div>
 		  </li>
-		  
+
 		  <li>
 		 	 <div class=" col-lg-3">
 			 <div class="produto-box">
@@ -555,7 +555,7 @@
 				</div>
 				</div>
 			</li>
-			
+
 			<li>
 				<div class=" col-lg-3">
 				<div class="produto-box">
@@ -592,7 +592,7 @@
 				</div>
 				</div>
 			</li>
-			
+
 			<li>
 				<div class=" col-lg-3">
 				<div class="produto-box">
@@ -629,7 +629,7 @@
 				</div>
 				</div>
 			</li>
-			
+
 			<li>
 				<div class=" col-lg-3">
 				<div class="produto-box">
@@ -672,14 +672,14 @@
 <div class="container"><!-- CONTAINER -->
 	<div class="row">
 		<ul class="banner-produto-destaque">
-			<li > 
+			<li >
 				<div class="col-lg-8 col-md-4 col-sm-12 col-xm-12">
 					<div class="product">
 					<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom " src="imagens/produtos/blusas/blusa1.png" alt="" title=""></a>
 					</div>
 				</div>
 			</li>
-			<li> 
+			<li>
 				<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
 				<div class="product">
 				<a href="#" ><img class="img-categoria iimg-categoria-banner img-categoria-custom" src="imagens/produtos/regata/regata2.png" alt="" title=""></a>
@@ -692,15 +692,15 @@
 <div class="container">
 	<div class="row">
 			<ul class="banner-produto-destaque">
-				<li> 
-					<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
+				<li>
+				<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
 					<div class="product">
 					<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom" src="imagens/produtos/regata/babylook long.png" alt="" title=""></a>
 					</div>
 				</div>
 				</li>
-				<li> 
-					<div class="col-lg-8 col-md-4 col-sm-12 col-xm-12">
+				<li>
+				<div class="col-lg-8 col-md-4 col-sm-12 col-xm-12">
 					<div class="product">
 					<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom" src="imagens/produtos/regata/almofadas.png" alt="" title=""></a>
 					</div>
@@ -709,5 +709,4 @@
 			</ul>
 			</div>
 </div><!-- FIM CONTAINER -->
-
 <?php include('footer.php'); ?>

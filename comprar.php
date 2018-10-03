@@ -1,4 +1,7 @@
 <?php include 'header.php'?>
+<?php
+$nome_do_arquivo = basename( __FILE__ );
+?>
 
 <div class="container">
     <div class="row">
@@ -10,7 +13,7 @@
                     menu
                 </div>
                 <div class="nome-produto-comprar text-center">
-                    Lorem ipsum dolor sit amet 
+                    Lorem ipsum dolor sit amet
                 </div>
                 <div>
                     <div class="estrelas">
@@ -37,7 +40,7 @@
                             <li class="col-lg-3 col-md-3 col-sm-12 col-xm-12"><a href="#">A5 (14,8 X 21,0 cm)</a></li>
                         </ul>
                 </div>
-                <div class="descricao-pagamento col-lg-12 col-md-12 col-sm-12 col-xm-12 box-comprar"> 
+                <div class="descricao-pagamento col-lg-12 col-md-12 col-sm-12 col-xm-12 box-comprar">
                    <p> A partir de
                     <span>R$ 17,90</span>
                     até <span>3x de R$ 5,95 sem juros</span> ou <span>R$ 16,11 via Depósito</span></p>
@@ -57,15 +60,15 @@
                             <li><a class="dropdown-item" href="#"><span>2x</span> de R$ 8,95 sem juros</a></li>
                             <li><a class="dropdown-item" href="#"><span>3x</span> de R$ 5,96 sem juros</a></li>
                         </ul>
-                       
-                       
-         
+
+
+
                 </div>
                 </div>
-               
+
                     <div class="col-sm-12 cal-cep">
-                        
-                        
+
+
                         <div class="input-group">
                             <input type="number" class="form-control" placeholder="CEP">
                             <span class="input-group-btn">
@@ -73,9 +76,9 @@
                             </span>
                             </div>
                         </div>
-               
+
             </div>
-        
+
         </div>
     </div>
 
