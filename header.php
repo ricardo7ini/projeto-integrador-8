@@ -46,125 +46,140 @@ if(Mysqli_connect_errno())//0 = não tem erro, logo não mostra nada na tela
 		<link rel="stylesheet" href="css/style.css">
 		<!-- Só carrega esse estilo se for a pagina comprar.php -->
 		<link rel="stylesheet" href="css/compra-style.css">
+		<!------ Include the above in your HEAD tag ---------->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
 
 	</head>
 	<body>
 
-		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		  <div class="modal-dialog" role="document">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		          <span aria-hidden="true">&times;</span>
-		        </button>
-		      </div>
-		      <div class="modal-body">
+		<nav class="navbar navbar-default navbar-custom">
+			<div class="flipkart-navbar">
+					<div class="container">
+							<div class="row row1">
+									<ul class="largenav pull-right">
+											<li class="upper-links"><a class="links" href="#">Home</a></li>
+											<li class="upper-links"><a class="links" href="#">Sobre</a></li>
+											<li class="upper-links"><a class="links" href="#">Revenda</a></li>
+											<li class="upper-links"><a class="links" href="#">Afiliados</a></li>
+											<li class="upper-links"><a class="links" href="#">Informações</a></li>
+											<li class="upper-links"><a class="links" href="#">Contato</a></li>
+											<li class="upper-links"><a class="links" href="#"></a></li>
+											<li class="upper-links"><a class="links" href="#">Meus dados</a></li>
+											<li class="upper-links"><a class="links" href="#">Meus pedidos</a></li>
+											<li class="upper-links"><a class="links" href="#">Lista de desejos</a></li>
+											<li class="upper-links">
+															<a  href="#">
+																	<svg class="" width="16px" height="12px" style="overflow: visible;">
+																			<i class="fas fa-1x fa-bell" style="color:#fff;"></i>
+																	</svg>
+															</a>
+													</li>
+													<li class="upper-links dropdown"><a class="links" href="login.php">Fazer login</a>
+															<ul class="dropdown-menu">
+																	<li class="profile-li"><a class="profile-links" href="nova_conta.php">Criar Conta</a></li>
+															</ul>
+													</li>
 
-		        <!-- Início do Corpo do Modal -->
-		        <form class="text-center" action="valida-login.php" method="post">
-			        <div class="col-lg-12 col-md-12 col-sm-12">
-			        	<div class="col-lg-7 col-md-7 col-lg-6">
-			        		<label>Usuário</label>
-			        		<input type="text" name="email">
-			        	</div>
-			        </div>
-
-			        <div class="col-lg-12 col-md-12 col-sm-12">
-			        	<div class="col-lg-7 col-md-7 col-lg-6">
-			        		<label>Senha</label>
-			        		<input type="password" name="senha">
-			        	</div>
-			        </div>
-
-			        <div class="col-lg-12 col-md-12 col-sm-12">
-			        	<div class="col-lg-2 col-md-7 col-lg-6">
-			        		<input type="submit" class="btn btn-primary form-control" value="Enviar">
-			        	</div>
-			        </div>
-			    </form>
-		        <!-- Fim do Corpo do Modal -->
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
-					</div>
+									</ul>
 							</div>
-						</div>
+							<div class="row row2">
+									<div class="col-sm-2">
+											<h2 style="margin:0px; text-align:center;">
+												<span class="smallnav men"><a href="index.php" class="logo">HOLLY</a></span>
+												<span class="smallnav menu" onclick="openNav()">☰</span>
+											</h2>
+											<h1 style="margin:0px;">
+												<span class="largenav logo"><a href="index.php" class="logo">HOLLY</a></span>
+											</h1>
+									</div>
+									<div class="flipkart-navbar-search smallsearch col-sm-8 col-xs-10">
+											<div class="row">
+													<input class="flipkart-navbar-input col-xs-10" type="" placeholder="Digite o nome do produto..." name="">
+													<button class="flipkart-navbar-button col-xs-2">
+															<svg width="15px" height="15px">
+																	<i class="fas fa-search"></i>
+													</button>
+											</div>
+									</div>
+									<div class="cart largenav col-sm-2">
+											<a class="cart-button">
+													<svg class="cart-svg " width="16 " height="16 " viewBox="0 0 16 16 ">
+														<i class="fas fa-1x fa-shopping-cart"></i>
+													</svg> Link
+													<span class="item-number ">0</span>
+											</a>
+									</div>
+
+							</div>
 					</div>
+			</div>
+			<div id="mySidenav" class="sidenav">
+					<div class="container" style="background-color: #000; padding-top: 10px;">
+							<span class="sidenav-heading logo">HOLLY</span>
+							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+					</div>
+					<a href="#">masculino</a>
+					<a href="#">feminino</a>
+					<a href="#">infantil</a>
+					<a href="#">esporte</a>
+					<a href="#">inspiracao</a>
+						<a href="#">outlet</a>
 
-<nav class="nav-menu">
-	<ul class="menu">
-		<li class="menu-item"><a class="menu-link" href="#">Home</a></li>
-		<li class="menu-item">
-				<div class="div-logo" id="logo">
-					<a class="menu-link" href="index.php"><h1 class="logo">HOLLY!</h1></a>
-				</div>
-		</li>
-		<li class="menu-item"><a class="menu-link" href="#">Contato</a></li>
-	</ul>
-	<div class="icon">
-		<!-- Início Botão Modal -->
-		<button type="button" class="btn btn-primary btn-primary-custom" data-toggle="modal" data-target="#exampleModal">
-		Login <i class="fas fa-user-alt icon-stilo" onclick=""></i>
-		</button>
-		<!-- Fim Botão Modal -->
-		<i class="fas fa-shopping-cart fa-2x icon-stilo" onclick=""></i>
-	</div>
-
-	<ul class="menu-mobil">
-		<div class="div-logo" id="logo">
-		<a class="menu-link" href="index.html"><h1 class="logo">HOLLY!</h1></a>
-		</div>
-		<div class="icons" onclick=""><i class="fas fa-bars  fa-2x icon-stilo"></i></div>
-		<li class="menu-item-mobil"><a class="menu-link" href="#">Home</a></li>
-		<li class="menu-item-mobil"><a class="menu-link" href="#">Contato</a></li>
-		</div>
-	</ul>
-</nav>
-
-<nav class="navbar navbar-default navbar-custom">
+			</div>
   <div class="container">
     <ul class="nav navbar-nav nav-custom">
-			<?php
-				while($registro = mysqli_fetch_assoc($categorias))
-				{
-					foreach ($registro as $value)
-					{
-						if($value == 'masculino')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 um"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
 
-						if($value == 'feminino')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 dois"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 um">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">MASCULINO</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
 
-						if($value == 'infantil')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 tres"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
 
-						if($value == 'esporte')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 quatro"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 dois">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">FEMININO</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
 
-						if($value == 'inspiracao')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 cinco"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
 
-						if($value == 'outlet')
-						{
-								echo '<li class="link col-lg-2 col-md-2 col-sm-12 six"><a style="text-transform: uppercase;" class="text-center" href="#">'.$value.'</a></li>';
-						}
-					}
-				}
-			 ?>
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 tres">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">INFANTIL</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
 
+
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 quatro">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">ESPORTE</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
+
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 cinco">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">INSPIRAÇÃO</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
+
+
+			<li class="upper-links dropdown link col-lg-2 col-md-2 col-sm-12 six">
+				<a class="links text-center" href="login.php" style="text-transform: uppercase;">OUTLET</a>
+					<ul class="dropdown-menu">
+							<li class="profile-li"><a class="profile-links" href="#">link</a></li>
+					</ul>
+			</li>
 			<hr />
+
     </ul>
   </div>
 </nav>
+<div class="header">
+</div>

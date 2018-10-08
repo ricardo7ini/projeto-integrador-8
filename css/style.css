@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /*
-cores principais 
+cores principais
 cor: #f09b1a laranja(seila)
 cor: #000 (preto)
 cor: #fff (branco)
@@ -15,56 +15,207 @@ cor: #fff (branco)
 
 .cormoda{color: #000;}
 
-.nav-menu{
-    color: #FFF;
+/*menu*/
+.flipkart-navbar {
     background-color: #000;
-    width: 100%;
-    height: 60px;
-    max-height: 100%;
+    color: #FFFFFF;
+}
+
+.row1{
+    padding-top: 10px;
+}
+
+.row2 {
+    padding-bottom: 20px;
+}
+
+.flipkart-navbar-input {
+    padding: 11px 16px;
+    border-radius: 2px 0 0 2px;
+    border: 0 none;
+    outline: 0 none;
+    font-size: 15px;
+    color: #666;
+}
+
+.flipkart-navbar-button {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 0 2px 2px 0;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    cursor: pointer;
+}
+
+.cart-button {
+    background-color: #000;
+    box-shadow: 0 2px 4px 0 #ffffff45, inset 2px 2px 0 0 hsla(0, 0%, 100%, .2);
+    padding: 10px 0;
+    text-align: center;
+    height: 41px;
+    border-radius: 2px;
+    font-weight: 500;
+    width: 120px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    color: #FFFFFF;
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
 }
-.menu{
-    list-style: none;
-}
-.menu-item{
-    display: inline-flex;
-    padding: 5px;
-    position: relative;
-    justify-content: center;
 
-}
-.menu-link{
-    color: #fff;
-    padding-bottom: 0px;
-}
-.btn-primary.focus, .btn-primary:focus{
-    background-color: #fff;
-    color: #000;
-}
-#logo{
-    padding-bottom: 0;
-}
-.menu-link:hover{
+.cart-button:hover{
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
-.menu-item> .logo{
-  position: relative;
-  display: block;
+
+.cart-svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
-.btn-primary-custom{
-    background-color: #0000;
+
+.item-number {
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .1);
+    height: 20px;
+    padding: 3px 6px;
+    font-weight: 500;
+    display: inline-block;
+    color: #fff;
+    line-height: 12px;
+    margin-left: 10px;
+}
+
+.upper-links {
+    display: inline-block;
+    padding: 0 11px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0;
+    color: inherit;
     border: none;
-    border-radius: 0;
-    height: 100%;
+    outline: none;
+    font-size: 12px;
 }
-.btn-primary-custom:hover{
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.dropdown:hover {
     background-color: #fff;
+}
+
+.dropdown:hover .links {
     color: #000;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+    background-color: #fff;
+    color: #333;
+    left: 0px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 4px 8px -3px #555454;
+    margin: 0;
+    padding: 0px;
+}
+
+.links {
+    color: #fff;
+    text-decoration: none;
+}
+
+.links:hover {
+    color: #fff;
+
+}
+
+.profile-links {
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    border-bottom: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    display: block;
+    padding: 0 11px;
+    line-height: 23px;
+}
+
+.profile-li{
+    padding-top: 2px;
+}
+
+.largenav {
+    display: none;
+}
+
+.smallnav{
+    display: block;
+}
+
+.smallsearch{
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.menu{
+    cursor: pointer;
+}
+/*Sidenav*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px -3px #555454;
+    padding-top: 0px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+}
+.sidenav-heading{
+    font-size: 36px;
+    color: #fff;
+}
+
 /* MENU PARA MOBILE*/
 
 .wrapper{
@@ -73,15 +224,15 @@ cor: #fff (branco)
 }
 
 .logo{
-    margin: 0;
-    padding: 0;
     font-family: 'Fjalla';
     font-size: 45px;
-    position: relative;
-    display: block;
-
+    color: #fff;
+    text-decoration: none;
 }
-
+.logo:hover{
+  text-decoration: none;
+  color: #d2af2c;
+}
 .navbar-default .navbar-nav > li > a {
     color: #FFF;
     font-family: 'Oswald';
@@ -104,13 +255,13 @@ cor: #fff (branco)
 }
 .product .img-categoria{
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1); 
+    -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1); 
+    -ms-transform: scale(1);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
-    transform: scale(1);  
+    transform: scale(1);
 }
 
 .product .img-categoria:hover{
@@ -119,7 +270,7 @@ cor: #fff (branco)
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.2);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.2);   
+    -ms-transform: scale(1.2);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1.2);
     transition: all 200ms ease-in;
@@ -135,12 +286,6 @@ cor: #fff (branco)
     max-height: 270px;
     left: 0;
 }
-
-
-
-
-
-
 
 .menu-mobil{
     display: none;
@@ -159,9 +304,16 @@ cor: #fff (branco)
     Estilo do menu de categorias
 ************************************/
 .navbar-custom{
-    min-height: 20px;
-    border: none;
-    margin: 0;
+  display: block;
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  min-height: 20px;
+  border: none;
+  margin: 0;
+}
+.header{
+  height: 160px;
 }
 .link{
 
@@ -178,14 +330,14 @@ cor: #fff (branco)
     margin: 0;
     text-decoration: none;
     color: #333;
-   
+
 }
 .nav-custom{
     width: 100%;
-} 
+}
 .linha-nav{
     width: 25%;
-  
+
 }
 
 .fixed-menu {
@@ -316,7 +468,7 @@ hr {
 }
 .carousel-inner-custom{
     max-height: 296px;
-    
+
 }
 .carousel-control-custom{
     background-color: none;
@@ -384,7 +536,7 @@ hr {
     max-height: 270px;
     z-index: 1;
 }
-  
+
 .produto-descricao{
     width: 90%;
     margin: 0 auto;
@@ -425,7 +577,7 @@ hr {
     cursor: pointer;
 }.comprar-produto>a{
     color: #fff;
-    
+
 }
 
 .comprar-produto>a:hover{
@@ -442,7 +594,7 @@ hr {
     padding: 80px 0;
     background: #fff;
     }
-    
+
     .home-newsletter .single {
     max-width: 650px;
     margin: 0 auto;
@@ -463,7 +615,7 @@ hr {
     box-shadow: none;
     border-color: #243c4f; }
     .home-newsletter .single .btn {
-    min-height: 50px; 
+    min-height: 50px;
     /* border-radius: 0 20px 20px 0; */
     background: #000;
     color: #fff;
@@ -500,7 +652,7 @@ hr {
         background-color: #000;
         height: 40px;
         width: 100%;
-        
+
     }
     .copy a{
         color: #fff;
@@ -511,68 +663,100 @@ hr {
     .img-footer{
         height: 250px;
     }
-@media(max-width: 768px){
-    .banner-desck{
-        display: none;
-    }
-    .nav-custom{
-        width: auto;
-    }
-    .btn-primary.focus, .btn-primary:focus{
-        background-color: #000;
-    }
-    .btn-primary.focus, .btn-primary:focus:hover{
-        background-color: #fff;
-        color: #000;
-    }
-    .icons{
-        display: block;
-        cursor: pointer;
-        padding-bottom: 10px;
-    }
-    .icon{
-        display: flex;
-        position: absolute;
-        top: 27px;
-        justify-content: center;
-        align-items: center;
-        top: 0;
+    .form-horizontal-custom{
+      border: solid #6666668f 1px;
+      margin: 30px 0px 30px 0px;
 
     }
-    .nav-menu{
-        
-        
-        width: 100%;
-        height: auto;
-        margin-bottom: 2.5%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .control-label-custom{
+      text-align: left;
     }
-    .menu-mobil{
-        margin: 0;
-        padding: 0;
-        display: block;
-        list-style: none;
-        text-align: center;
+    .btn-default-custom
+    {
+      background-color: #000;
+      color: #fff;
     }
-    .menu-item-mobil{
-        display: none;
-        border-bottom: 2px solid #fff;
-        padding: 20px;
+/*Sidenav*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px -3px #555454;
+    padding-top: 0px;
+}
 
-    }
-    .mostra{
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+  }
+  .nav-custom{
+    display: block;
+  }
+  .container-custom{
+    width: 850px;
+  }
+  .nav-pills>li>a{
+    color: #000;
+  }
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+    background-color: #d2af2c;
+  }
+
+  .janela-dinamica{
+    border: solid 1px #000;
+    height: 350px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav a {font-size: 18px;}
+  }
+@media(max-width: 768px)
+{
+  .nav-custom{
+    display: none;
+  }
+  .navbar-custom{
+    display: block;
+    position: relative;
+  }
+  .header
+  {
+    display: none;
+  }
+  #myCarousel{
+    display: none;
+  }
+
+
+}
+@media screen and (min-width: 768px) {
+
+    .largenav {
         display: block;
     }
-    .menu{
+    .smallnav{
         display: none;
     }
-    .form-box{
-        width: 100%;
-        height: auto;
-        float: none;
+    .smallsearch{
+        margin: 0px;
     }
 
 
