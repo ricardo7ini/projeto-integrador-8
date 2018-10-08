@@ -62,7 +62,7 @@ if(isset($_FILES['arquivo']) && $_FILES['arquivo']['error'] == UPLOAD_ERR_OK){
             <div class="col-md-offset-1 col-sm-10">
               <label for="pass" class="control-label text-left">Senha</label><br><br>
               <input type="password" class="form-control" id="inputPassword3" placeholder="Password" name="senha">
-                <a href="#" >Esqueceu sua senha?</a>
+                <a href="redefinir_senha.php" >Esqueceu sua senha?</a>
             </div>
           </div>
 

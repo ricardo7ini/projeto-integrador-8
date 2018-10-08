@@ -1,5 +1,6 @@
 <?php require 'header.php'; ?>
 <div class="container">
+  <h4>REDEFINIR SENHA</h4>
   <div class="row">
     <div class="col-lg-offset-3 col-lg-3">
       <ul class="nav nav-pills nav-stacked">
