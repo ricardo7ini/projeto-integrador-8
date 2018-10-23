@@ -1,33 +1,3 @@
-<?php
-/*
-	CONEXÃO COM O BANCO DE DADOS
-	Mysqli_connect("servidor","usuario","senha","nome do banco"); ---> função pré definida que conecta o banco de dados <--
-*/
-//passo 1 - conectando ao banco de dados
-$conecta = Mysqli_connect("localhost","root","","holly");
-
-
-//passo 2 - testar coneexao
-if(Mysqli_connect_errno())//0 = não tem erro, logo não mostra nada na tela
-{
-	die("Conexão falhou: ".Mysqli_connect_errno());
-}
-
- ?>
-
-<?php
-	//passo 3 - criando uma consulta
-	$consulta_categoria = "SELECT nome_categoria FROM categoria";
-	$categorias = mysqli_query($conecta,$consulta_categoria);
-
-	if(!$categorias)
-	{
-		die("Falha na consulta ao Banco.");
-	}
-
-
-?>
-
 
 <!DOCTYPE html>
 <html>

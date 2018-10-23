@@ -9,7 +9,7 @@ cor: #000 (preto)
 cor: #fff (branco)
 */
 * {box-sizing: border-box;word-break: break-all;font-family: 'roboto';font-size: 100%;margin: 0;padding: 0;}
-
+body,html{height: 100vh;}
 
 
 
