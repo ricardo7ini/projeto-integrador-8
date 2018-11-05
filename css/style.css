@@ -228,6 +228,7 @@ body,html{height: 100vh;}
     font-size: 45px;
     color: #fff;
     text-decoration: none;
+    
 }
 .logo:hover{
   text-decoration: none;
@@ -735,12 +736,9 @@ hr {
   }
   .navbar-custom{
     display: block;
-    position: relative;
+    position: fixed;
   }
-  .header
-  {
-    display: none;
-  }
+ 
   #myCarousel{
     display: none;
   }

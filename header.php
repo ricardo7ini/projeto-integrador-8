@@ -69,7 +69,7 @@
 													<input class="flipkart-navbar-input col-xs-10" type="" placeholder="Digite o nome do produto..." name="">
 													<button class="flipkart-navbar-button col-xs-2">
 															<svg width="15px" height="15px">
-																	<i class="fas fa-search"></i>
+																	<i class="fas fa-search"></i></svg>
 													</button>
 											</div>
 									</div>
@@ -86,8 +86,8 @@
 					</div>
 			</div>
 			<div id="mySidenav" class="sidenav">
-					<div class="container" style="background-color: #000; padding-top: 10px;">
-							<span class="sidenav-heading logo">HOLLY</span>
+					<div class="container" style="background-color: #000; padding-top: 10px; height: 50px;">
+							<span class="sidenav-heading logo"></span>
 							<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
 					</div>
 					<a href="#">masculino</a>
