@@ -11,22 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::prefix('holly')->group(function()
 {
     Route::resource('/', 'ListarProdutos');
     Route::resource('comprar', 'ListarProdutos');
-    Route::get('/login', 'viewController@get_view_login' )->name('entrar');
+    
+    /**
+     * Rotas de login e sauth
+     */
+    Route::get('login', 'ClienteController@fazerLogin' );
+    Route::post('login', 'ClienteController@auth')->name('entrar');
 
     Route::resource('novaConta','ClientesController' );
 
     Route::get('/Recuperar Senha', 'viewController@get_view_recuperarSenha')->name('recuperar senha');
     Route::get('/Duvidas', 'viewController@get_view_duvidas')->name('duvidas');
-    
+    Route::post('sair','viewController@sair')->name('sair');
     
     Route::resource('produtos', 'ProdutosControler');
     
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -34,6 +34,38 @@
           </ul>
         </div>
       @endif
+
+      @if(  session('sucesso')  )
+        <div class="alert alert-success" role="alert">
+            {{ session('sucesso') }}
+        </div>
+       
+      @endif
+      @if(  session('erro')  )
+      <div class="alert alert-success" role="alert">
+          {{ session('erro') }}
+      </div>
+     
+      @endif
+
+      @if(  session('editado')  )
+        <div class="alert alert-info" role="alert">
+            {{ session('editado') }}
+        </div>
+      @endif
+
+      @if(  session('erroedit')  )
+      <div class="alert alert-info" role="alert">
+          {{ session('erroedit') }}
+      </div>
+      @endif
+
+      @if(  session('deletado')  )
+      <div class="alert alert-warning" role="alert">
+          {{ session('deletado') }}
+      </div>
+      @endif
+
         <form action="{{ route('produtos.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="form-group">
@@ -56,7 +88,7 @@
               </div>
             <div class="form-group">
                 <label for="preco">preço em R$*(obrigatório)</label>
-                <input type="number" class="form-control" name="preco">
+                <input type="number" step="0.01" class="form-control" name="preco">
             </div>
             <div class="text-center">
                 <button type="submit" class="btn btn-success">Cadastrar</button>
