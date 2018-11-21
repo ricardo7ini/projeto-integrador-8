@@ -31,7 +31,8 @@ Route::prefix('holly')->group(function()
     Route::get('/Recuperar Senha', 'viewController@get_view_recuperarSenha')->name('recuperar senha');
     Route::get('/Duvidas', 'viewController@get_view_duvidas')->name('duvidas');
     Route::post('sair','viewController@sair')->name('sair');
-    
+    Route::post('/pesquisa','ListarProdutos@busca');
+    Route::post('/categoria','ListarProdutos@categoria');
     Route::resource('produtos', 'ProdutosControler');
     
 });
