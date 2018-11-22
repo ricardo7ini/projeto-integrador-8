@@ -19,6 +19,8 @@ Route::prefix('holly')->group(function()
 {
     Route::resource('/', 'ListarProdutos');
     Route::resource('comprar', 'ListarProdutos');
+    //rota do carrinho de compras 
+    Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho.index');
     
     /**
      * Rotas de login e sauth
