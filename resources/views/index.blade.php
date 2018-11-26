@@ -34,6 +34,7 @@
 			<!-- FIM myCarousel -->
 	</div>
 	<!-- FIM CONTAINER SLIDER -->
+
 	<div class="container">
 			<div class="row">
 	
@@ -57,6 +58,7 @@
 				</div>
 			</div>
 	</div>
+
 	<div class="container">
 			<!-- CONTAINER -->
 			<div class="row">
@@ -99,7 +101,13 @@
 							até <span>3x</span> de <span>R$ {{ number_format($produto->preco/3, 2) }}</span> sem juros ou <br><span>R$ {{number_format($produto->preco, 2) }}</span> via Depósito
 							</div>
 						<div class="comprar-produto">
-						<a class="btn-vermais" href="{{ route('comprar.show',$produto->id) }}">VER MAIS</a>
+							<form action="{{ route('Carrinho.adicionar') }}" method="POST">
+								{{csrf_field()}}
+								<input type="hidden" name="id" value="{{ $produto->id }}">
+								<button class="btn-vermais" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+									<span style="color:#fff;">Comprar<span>
+								</button>
+							</form>
 						</div>
 							</div>
 						</div>
@@ -147,7 +155,12 @@
 							até <span>3x</span> de <span>R$ 21,60</span> sem juros ou <span>R$ 58,32</span> via Depósito
 							</div>
 							<div class="comprar-produto">
-							<a class="btn-vermais" href="comprar.php">VER MAIS</a>
+									<form action="{{ route('Carrinho.adicionar') }}" method="POST">
+											{{csrf_field()}}
+											<input type="hidden" name="id" value="{{ $produto->id }}">
+											<button class="btn-vermais" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+												<span style="color:#fff;">Comprar<span>
+											</button>
 							</div>
 							</div>
 						</div>
@@ -211,4 +224,29 @@
 				</ul>
 				</div>
 	</div><!-- FIM CONTAINER -->
+	<div class="container-fluid">
+      <div class="container"><!-- CONTAINER -->
+        <div class="row">
+        <div class="title-lancamento text-center"><i class="fab fa-2x fa-instagram"></i>  SIGA NOSSO <a href="#">INSTAGRAM@HOLLY</a></div>
+          <h2 class="text-center">embed do instagram</h2>
+        </div>
+      </div><!-- FIM  CONTAINER -->
+  
+    <section class="home-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="single">
+              <h2>RECEBA NOSSAS OFERTAS POR E-MAIL</h2>
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="E-mail">
+              <span class="input-group-btn">
+              <button class="btn btn-theme" type="submit">Subscribe</button>
+              </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 	@endsection

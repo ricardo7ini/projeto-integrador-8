@@ -212,31 +212,7 @@
     
 @section('rodape')
 <footer>
-    <div class="container-fluid">
-      <div class="container"><!-- CONTAINER -->
-        <div class="row">
-        <div class="title-lancamento text-center"><i class="fab fa-2x fa-instagram"></i>  SIGA NOSSO <a href="#">INSTAGRAM@HOLLY</a></div>
-          <h2 class="text-center">embed do instagram</h2>
-        </div>
-      </div><!-- FIM  CONTAINER -->
-  
-    <section class="home-newsletter">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="single">
-              <h2>RECEBA NOSSAS OFERTAS POR E-MAIL</h2>
-            <div class="input-group">
-              <input type="email" class="form-control" placeholder="E-mail">
-              <span class="input-group-btn">
-              <button class="btn btn-theme" type="submit">Subscribe</button>
-              </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+   
   
         <div class="lg-col-3 col-md-3 col-sm-12 col-xm-12">
           <div class="">

@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class pedido_produto extends Model
 {
-    
+    protected $fillable = [
+        'peidido_id',
+        'produto_id',
+        'status',
+        'valor'
+    ]; 
         /**
          * metodo da relação
          *
