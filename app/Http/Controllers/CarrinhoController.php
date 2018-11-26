@@ -37,7 +37,9 @@ class CarrinhoController extends Controller
             $req->session()->flash('mensagem-falha','Porduto não encontrado em nossa loja');
             return redirect()->route('carrinho.index');
         }
+
         $idusuario = Auth::id();
+
         $idpedido = pedido::consultaId([
             'user_id' => $idusuario,
             'status'  => 'RE' //reservado

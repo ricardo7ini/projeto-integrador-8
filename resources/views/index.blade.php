@@ -12,7 +12,7 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner carousel-inner-custom">
 						<div class="item active">
-							<img class="img-responsive" src="{{ url('storage/imagens/slider/baner.jpg') }}" alt="Modelo1" >
+							<img class="img-responsive" src="{{ url('imagens/slider/baner.jpg') }}" alt="Modelo1" >
 						</div>
 						{{-- <div class="item">
 							<img class="img-responsive" src="{{ url('storage/imagens/slider/camisetas2.jpg') }}" alt="Modelo2">
@@ -42,17 +42,17 @@
 				<div class="vip-product">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
 							<div class="product">
-									<a href="#" ><img class="img-categoria" src="{{ url('storage/imagens/img-categoria/Camisetas.jpg') }}" alt="" title=""></a>
+									<a href="#" ><img class="img-categoria" src="{{ url('imagens/img-categoria/Camisetas.jpg') }}" alt="" title=""></a>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
 							<div class="product">
-									<a href="#" ><img class="img-categoria" src="{{ url('storage/imagens/img-categoria/legging.jpg') }}" alt="" title=""></a>
+									<a href="#" ><img class="img-categoria" src="{{ url('imagens/img-categoria/legging.jpg') }}" alt="" title=""></a>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xm-12">
 							<div class="product">
-									<a href="#" ><img class="img-categoria" src="{{ url('storage/imagens/img-categoria/vestidos.jpg') }}" alt="" title=""></a>
+									<a href="#" ><img class="img-categoria" src="{{ url('imagens/img-categoria/vestidos.jpg') }}" alt="" title=""></a>
 							</div>
 						</div>
 				</div>
@@ -62,7 +62,7 @@
 	<div class="container">
 			<!-- CONTAINER -->
 			<div class="row">
-				<img class="img-responsive banner-desck" src="{{ url('storage/imagens/Banner/entrega_seguranca.jpg') }}">
+				<img class="img-responsive banner-desck" src="{{ url('imagens/Banner/entrega_seguranca.jpg') }}">
 			</div>
 	</div>
 	<!-- FIM CONTAINER -->
@@ -101,7 +101,7 @@
 							até <span>3x</span> de <span>R$ {{ number_format($produto->preco/3, 2) }}</span> sem juros ou <br><span>R$ {{number_format($produto->preco, 2) }}</span> via Depósito
 							</div>
 						<div class="comprar-produto">
-							<form action="{{ route('Carrinho.adicionar') }}" method="POST">
+							<form action="{{ route('produto.exibir') }}" method="GET">
 								{{csrf_field()}}
 								<input type="hidden" name="id" value="{{ $produto->id }}">
 								<button class="btn-vermais" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
@@ -155,12 +155,10 @@
 							até <span>3x</span> de <span>R$ 21,60</span> sem juros ou <span>R$ 58,32</span> via Depósito
 							</div>
 							<div class="comprar-produto">
-									<form action="{{ route('Carrinho.adicionar') }}" method="POST">
-											{{csrf_field()}}
-											<input type="hidden" name="id" value="{{ $produto->id }}">
-											<button class="btn-vermais" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
-												<span style="color:#fff;">Comprar<span>
-											</button>
+								
+											<a class="btn-vermais" href="url()" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+												Ver mais</a>
+											
 							</div>
 							</div>
 						</div>
@@ -185,7 +183,7 @@
 					<div class="col-lg-8 col-md-6 col-sm-6 col-xm-12">
 						<div class="product">
 						<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom " 
-							src="{{ url('storage/imagens/produtos/blusas/blusa1.png')}}" alt="" title=""></a>
+							src="{{ url('imagens/produtos/blusas/blusa1.png')}}" alt="" title=""></a>
 						</div>
 					</div>
 				</li>
@@ -194,7 +192,7 @@
 					<div class="product">
 					<a href="#" >
 						<img class="img-categoria iimg-categoria-banner img-categoria-custom" 
-						src="{{ url('storage/imagens/produtos/regata/regata2.png') }}" alt="" title="">
+						src="{{ url('imagens/produtos/regata/regata2.png') }}" alt="" title="">
 					</a>
 					</div>
 				</div>
@@ -209,7 +207,7 @@
 					<div class="col-lg-4 col-md-6 col-sm-6 col-xm-12">
 						<div class="product">
 						<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom" 
-							src="{{ url('storage/imagens/produtos/regata/babylook long.png') }}" alt="" title=""></a>
+							src="{{ url('imagens/produtos/regata/babylook long.png') }}" alt="" title=""></a>
 						</div>
 					</div>
 					</li>
@@ -217,7 +215,7 @@
 					<div class="col-lg-8 col-md-6 col-sm-6 col-xm-12">
 						<div class="product">
 						<a href="#" ><img class="img-categoria img-categoria-banner img-categoria-custom" 
-							src="{{ url('storage/imagens/produtos/regata/almofadas.png') }}" alt="" title=""></a>
+							src="{{ url('imagens/produtos/regata/almofadas.png') }}" alt="" title=""></a>
 						</div>
 					</div>
 					</li>

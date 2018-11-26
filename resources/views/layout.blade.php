@@ -211,17 +211,10 @@
     </main> 
     
 @section('rodape')
-<footer>
+<footer style="margin-top:20px;">
    
-  
-        <div class="lg-col-3 col-md-3 col-sm-12 col-xm-12">
-          <div class="">
-            <img class="img-responsive" src="{{ url('storage/imagens/site/HOLLY-LOGO.png') }}">
-            <!-- Cololar texto sobre a loja -->
-          </div>
-        </div>
-  
-        <div class="lg-col-3 col-md-3 col-sm-12 col-xm-12">
+
+        <div class="lg-col-4 col-md-4 col-sm-12 col-xm-12 text-center">
           <div class="">
               <span class="title-footer">Categorias</span>
           </div>
@@ -238,7 +231,7 @@
           </ul>
         </div>
   
-        <div class="lg-col-3 col-md-3 col-sm-12 col-xm-12">
+        <div class="lg-col-4 col-md-4 col-sm-12 col-xm-12 text-center">
           <div class="">
               <span class="title-footer">CONTEÚDO</span>
           </div>
@@ -257,7 +250,7 @@
           </ul>
         </div>
   
-        <div class="lg-col-3 col-md-3 col-sm-12 col-xm-12">
+        <div class="lg-col-4 col-md-4 col-sm-12 col-xm-12 text-center">
           <div class="">
               <span class="title-footer">social</span>
           </div>
@@ -270,11 +263,11 @@
           </ul>
         </div>
   
-          <div class="lg-col-6 col-md-6 col-sm-12 col-xm-12">
+          <div class="lg-col-6 col-md-6 col-sm-12 col-xm-12 ">
             <div class="coi-lg-8 col-md-8">
               <div class="" style="margin-bottom: 30px;">
                 <span class="title-footer">Pague Com</span>
-                <img class="img-responsive" src="{{ url('storage/imagens/site/forma de pagamento.png') }}">
+                <img class="img-responsive" src="{{ url('imagens/site/forma de pagamento.png') }}">
               </div>
             </div>
           </div>
@@ -283,7 +276,7 @@
             <div class="coi-lg-8 col-md-8">
               <div class="" style="margin-bottom: 30px;">
                 <span class="title-footer">SELOS</span>
-                <img class="img-responsive" src="{{ url('storage/imagens/site/internet-segura.jpg') }}">
+                <img class="img-responsive" src="{{ url('imagens/site/internet-segura.jpg') }}">
               </div>
             </div>
           </div>
