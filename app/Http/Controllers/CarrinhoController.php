@@ -34,7 +34,7 @@ class CarrinhoController extends Controller
         $produto = produto::find($idproduto);
         if(empty($produto->id))
         {
-            $req->session()->flash('mensagem-falha','Porduto não encontrado em nossa loja');
+            $req->Session()->flash('mensagem-falha','Porduto não encontrado em nossa loja');
             return redirect()->route('carrinho.index');
         }
 
@@ -59,7 +59,55 @@ class CarrinhoController extends Controller
             'status'    => 'RE'
         ]);
 
-        $req->session()->flash('menssagem-sucesso','produto adicionado ao carrinho com sucesso!');
+        $req->Session()->flash('menssagem-sucesso','produto adicionado ao carrinho com sucesso!');
         return redirect()->route('carrinho.index');
+    }
+    public function remover()
+    {
+        $this->middleware('VerifyCsrfToken');
+
+        $req = Request();
+        $idpedido           = $req->input('pedido_id');
+        $idproduto          = $req->input('produto_id');
+        $remove_apenas_item = (boolean)$req->input('item');
+        $idusuario          = Auth::id();
+
+        $idpedido = pedido::consultaId([
+            'id'        => $idpedido,
+            'user_id'   => $idusuario,
+            'status'    => 'RE' // reservada
+        ]);
+        if(empty($idpedido))
+        {
+            $req->Session()->flash('mensagem-falha','pedido não encontrado!');
+            return redirect()->route('carrinho.index');
+        }
+        $where_produto = [
+            'pedido_id' => $idpedido,
+            'produto_id'=> $idproduto
+        ];
+        $produto = pedido_produto::where($where_produto)->orderBy('id','desc')->first();
+        if(empty($produto->id))
+        {
+            $req->Session()->flash('mensagem-falha','produto não encontrado no carrinho!');
+            return redirect()->route('carrinho.index');
+        }
+        if( $remove_apenas_item)
+        {
+            $where_produto['id'] = $produto->id;
+        }
+        pedido_produto::where($where_produto)->delete();
+
+        $check_pedido = pedido_produto::where([
+            'pedido_id' => $produto->pedido_id,
+       ])->exists();
+       if(!$check_pedido)
+       {
+           pedido::where([
+            'id' => $produto->pedido_id
+           ])->delete();
+       }
+       $req->Session()->flash('mensagem-sucesso','produto removido do carrinho com sucesso!');
+       return redirect()->route('carrinho.index'); 
     }
 }

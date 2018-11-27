@@ -101,13 +101,10 @@
 							até <span>3x</span> de <span>R$ {{ number_format($produto->preco/3, 2) }}</span> sem juros ou <br><span>R$ {{number_format($produto->preco, 2) }}</span> via Depósito
 							</div>
 						<div class="comprar-produto">
-							<form action="{{ route('produto.exibir') }}" method="GET">
-								{{csrf_field()}}
-								<input type="hidden" name="id" value="{{ $produto->id }}">
-								<button class="btn-vermais" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
-									<span style="color:#fff;">Comprar<span>
-								</button>
-							</form>
+							<div class="comprar-produto">
+								<a class="btn-vermais" href="{{ route('produto.exibir',$produto->id) }}" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+									Ver mais</a>
+						</div>
 						</div>
 							</div>
 						</div>
@@ -150,15 +147,13 @@
 							</div>
 							</div>
 							<div class="preco-produto">
-							<div class="valor-total">R$ 64,80</div>
-							<div class="parcela-valor">
-							até <span>3x</span> de <span>R$ 21,60</span> sem juros ou <span>R$ 58,32</span> via Depósito
-							</div>
+								<div class="valor-total">R$ {{ number_format($produto_destaque->preco, 2) }}</div>
+								<div class="parcela-valor">
+								até <span>3x</span> de <span>R$ {{ number_format($produto_destaque->preco/3, 2) }}</span> sem juros ou <br><span>R$ {{number_format($produto_destaque->preco, 2) }}</span> via Depósito
+								</div>
 							<div class="comprar-produto">
-								
-											<a class="btn-vermais" href="url()" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+											<a class="btn-vermais" href="{{ route('produto.exibir',$produto_destaque->id) }}" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
 												Ver mais</a>
-											
 							</div>
 							</div>
 						</div>

@@ -8,12 +8,12 @@
         <hr/>
         @if (Session::has('mensagem-sucesso'))
             <div class="alert alert-success" role="alert">
-                <strong>{{ Session::get('menssagem-sucesso') }}<strong>
+                {{ Session::get('mensagem-sucesso') }}
             </div>
         @endif
         @if (Session::has('mensagem-falha'))
         <div class="alert alert-warning" role="alert">
-            <strong>{{ Session::get('menssagem-falha') }}<strong>
+            {{ Session::get('mensagem-falha') }}
         </div>
         @endif
         @forelse ($pedidos as $pedido)
@@ -80,5 +80,22 @@
         @endforelse
     </div>
 </div>
-
+<script type="text/javascript">
+    /*função de teste  para metodo remover */
+    function removeProduto(p_idpedido,p_idproduto, p_item){
+        $.ajax({
+            url: "{{route('Carrinho.remover')}}",
+            method: "DELETE",
+            data: {
+                _token: "{{ csrf_token() }}",
+                pedido_id: p_idpedido,
+                produto_id: p_idproduto,
+                item: p_item}
+            }).always(function(){
+                location.reload();
+            });
+       
+    }
+    
+</script>
 @endsection
