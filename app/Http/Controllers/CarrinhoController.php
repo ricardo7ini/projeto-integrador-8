@@ -80,7 +80,7 @@ class CarrinhoController extends Controller
         if(empty($idpedido))
         {
             $req->Session()->flash('mensagem-falha','pedido não encontrado!');
-            return redirect()->route('carrinho.index');
+            return redirect()->route('Carrinho.index');
         }
         $where_produto = [
             'pedido_id' => $idpedido,
@@ -90,7 +90,7 @@ class CarrinhoController extends Controller
         if(empty($produto->id))
         {
             $req->Session()->flash('mensagem-falha','produto não encontrado no carrinho!');
-            return redirect()->route('carrinho.index');
+            return redirect()->route('Carrinho.index');
         }
         if( $remove_apenas_item)
         {
@@ -108,7 +108,45 @@ class CarrinhoController extends Controller
            ])->delete();
        }
        $req->Session()->flash('mensagem-sucesso','produto removido do carrinho com sucesso!');
-       return redirect()->route('carrinho.index'); 
+       return redirect()->route('Carrinho.index'); 
     }
-    
+    public function concluir(Request $req)
+    {
+        $idpedido = $req->input('pedido_id');
+        $idusuario = Auth::id();
+
+        $check_pedido = pedido::where([
+            'id'        => $idpedido,
+            'user_id'   => $idusuario,
+            'status'    => 'RE' //Reservado
+        ])->exists();
+
+        if(!$check_pedido)
+        {
+            $req->Session()->flash('mensagem-falha','pedido não encontrado!');
+            return redirect()->route('Carrinho.index');
+        }
+
+        $check_produtos = pedido_produto::where([
+            'pedido_id' => $idpedido
+        ])->exists();
+        if(!$check_produtos)
+        {
+            $req->Session()->flash('mensagem-falha','produtos do pedido não encontrados!');
+            return redirect()->route('Carrinho.index');
+        }
+        pedido_produto::where([
+            'pedido_id' => $idpedido
+        ])->update([
+            'status' => 'PA'
+        ]);
+        pedido::where([
+            'id' => $idpedido
+        ])->update([
+            'status' => 'PA'
+        ]);
+
+        $req->Session()->flash('mensagem-sucesso','Compra concluida com sucesso!');
+        return redirect()->route('Carrinho.compras');
+    }
 }

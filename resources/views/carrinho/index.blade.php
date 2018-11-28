@@ -81,7 +81,15 @@
                         <div align="right">
                                 <a href="{{ route('index') }}" class="btn btn-success" data-positon="top" data-delay="50"
                                  data-toggle="tooltip" title="Voltar a página inicial para continuar comprando?"
-                                 style="width:250px; height:50px; padding:15px; background-color:black;">Continuar comprando</a>  
+                                 style="width:250px; height:50px; padding:15px; background-color:black; border:none;margin:2px; ">Continuar comprando</a>  
+                        {{-- <form action="{{ route('Carrinho.concluir') }}" method="post">
+                                {{ csrf_field() }}
+                                    <input type="hidden" name="pedido_id" value="{{ $pedido->id }}">
+                                        <button class="btn btn-success" data-positon="top" data-delay="50"
+                                        data-toggle="tooltip" title="Adquirir produtos concluindo a compra?"
+                                        style="width:250px; height:50px; padding:15px; background-color:black; border:none; margin:2px;">Cocluir compras</button> 
+
+                                 </form> --}}
                         </div>
             </div>
             
