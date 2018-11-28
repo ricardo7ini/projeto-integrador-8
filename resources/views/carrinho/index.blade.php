@@ -42,15 +42,22 @@
                         </td>
                         <td class="col=lg-2 col-md-2 col-sm-12" align="center">
                             <div align="center">
-                                <a class="col-lg-4 col-md-4 col-sm-4 " href="#">
+                                
+                                <a class="col-lg-4 col-md-4 col-sm-4 " href="#" onclick="carrinhoRemoverProduto(
+                                    {{$pedido->id}},{{$pedido_produto->produto_id}},1)">
                                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                 </a>    
+                                
                                 <span class="col-lg-4 col-md-4 col-sm-4" >{{ $pedido_produto->qtd }}</span>
-                                <a class="col-lg-4 col-md-4 col-sm-4"  href="#">
+                                
+                                <a class="col-lg-4 col-md-4 col-sm-4"  href="#" onclick="carrinhoAdicionarProduto(
+                                {{$pedido_produto->produto_id}})">
                                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                 </a>
+                            
                             </div>
-                            <a href="#" class="" data-positon="right" data-delay="50" data-toggle="tooltip" title="Retirar produto do carrinho?">Retirar produto</a>    
+                            <a href="#" class="" data-positon="right" data-delay="50" data-toggle="tooltip" title="Retirar produto do carrinho?" onclick="carrinhoRemoverProduto(
+                                {{$pedido->id}},{{$pedido_produto->produto_id}},0)">Retirar produto</a>    
                         </td>
                         <td class="col=lg-2 col-md-2 col-sm-12 col-xm-12">{{ $pedido_produto->produto->nome }}</td>
                         <td class="col=lg-2 col-md-2 col-sm-12 col-xm-12">R$: {{ number_format($pedido_produto->valores,2,',','.') }}</td>
@@ -80,7 +87,21 @@
         @endforelse
     </div>
 </div>
-<script type="text/javascript">
+<form id="form-remover-produto" method="POST" action="{{route('Carrinho.remover')}}">
+    {{ csrf_field() }}
+    {{ method_field("DELETE") }}
+    <input type="hidden" name="pedido_id">
+    <input type="hidden" name="produto_id">
+    <input type="hidden" name="item">
+</form>
+<form id="form-adicionar-produto" method="POST" action="{{route('Carrinho.adicionar')}}">
+    {{ csrf_field() }}
+    <input type="hidden" name="id">
+</form>
+{{-- @push('scripts')
+<script type="text/javascript" src="/js/script.js"></script>
+@endpush --}}
+{{-- <script type="text/javascript">
     /*função de teste  para metodo remover */
     function removeProduto(p_idpedido,p_idproduto, p_item){
         $.ajax({
@@ -97,5 +118,5 @@
        
     }
     
-</script>
+</script> --}}
 @endsection
