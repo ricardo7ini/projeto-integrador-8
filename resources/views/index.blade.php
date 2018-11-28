@@ -76,8 +76,8 @@
 			<li>
 					<div class=" col-lg-3 col-md-3 col-sm-6 col-xm-12">
 					<div class="produto-box">
-						<img class="produto-img" src="{{ asset('storage/'.str_after($produto->imgFrente,'public/')) }}">
-						<img class="img-costa" src="{{ asset('storage/'.str_after($produto->imgCosta,'public/')) }}">
+						<img width="270" height="270" class="produto-img" src="{{ asset('storage/'.str_after($produto->imgFrente,'public/')) }}">
+						<img width="270" height="270" class="img-costa" src="{{ asset('storage/'.str_after($produto->imgCosta,'public/')) }}">
 						<div class="produto-descricao">
 						<div class="nome-produto text-center"><a href="#">{{ $produto->nome }}</a></div>
 							<div class="avalicao-produto">
@@ -127,8 +127,8 @@
 			<li>
 					<div class=" col-lg-3 col-md-3 col-sm-6 col-xm-12">
 					<div class="produto-box">
-						<img class="produto-img" src="{{ asset('storage/'.str_after( $produto_destaque->imgFrente,'public/')) }}">
-						<img class="img-costa" src="{{ asset('storage/'.str_after( $produto_destaque->imgCosta,'public/')) }}">
+						<img width="270" height="270" class="produto-img" src="{{ asset('storage/'.str_after( $produto_destaque->imgFrente,'public/')) }}">
+						<img width="270" height="270" class="img-costa" src="{{ asset('storage/'.str_after( $produto_destaque->imgCosta,'public/')) }}">
 						<div class="produto-descricao">
 						<div class="nome-produto text-center"><a href="#">{{ $produto_destaque->nome }}</a></div>
 							<div class="avalicao-produto">

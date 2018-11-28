@@ -73,12 +73,15 @@
                 </tbody>
             </table>
             <div class="container text-center">
-                    <div class="row">
-                            <strong class="col-lg-2 col-md-2 col-sm-2">Total do pedido: </strong>
-                            <span class="col-lg-2 col-md-2 col-sm-2">R$: {{ number_format($total_pedido,2,',','.') }}</span>
+                    <div align="right">
+                            <strong>Total do pedido: </strong>
+                            <span>R$: {{ number_format($total_pedido,2,',','.') }}</span>
                         </div>
-                        <div class="row">
-                                <a href="{{ route('index') }}" class="col-lg-4 col-md-4 col-sm-4 btn btn-success" data-positon="top" data-delay="50" data-toggle="tooltip" title="Voltar a página inicial para continuar comprando?">Continuar comprando</a>  
+                        <!-- BOTÃO CONTINUAR COMPRANDO / CSS INLINE-->
+                        <div align="right">
+                                <a href="{{ route('index') }}" class="btn btn-success" data-positon="top" data-delay="50"
+                                 data-toggle="tooltip" title="Voltar a página inicial para continuar comprando?"
+                                 style="width:250px; height:50px; padding:15px; background-color:black;">Continuar comprando</a>  
                         </div>
             </div>
             

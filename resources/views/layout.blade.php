@@ -114,10 +114,10 @@
                             </div>
                         </div>
                         <div class="cart largenav col-sm-2">
-                            <a class="cart-button">
+                        <a class="cart-button" href="{{ route('carrinho.index')}}">
                                 <svg class="cart-svg " width="16 " height="16 " viewBox="0 0 16 16 ">
                                   <i class="fas fa-1x fa-shopping-cart"></i>
-                                </svg> Link
+                                </svg>
                                 <span class="item-number ">0</span>
                             </a>
                         </div>
@@ -174,7 +174,7 @@
                         @csrf
                             <button type="submit" 
                             class="links text-center" style="text-transform: uppercase;color:#000;
-                            background:#fff;border:none;" name="camiseta" value="laging">LEGING</button>
+                            background:#fff;border:none;" name="camiseta" value="lagging">LEGGING</button>
                         </form>
             </li>
       

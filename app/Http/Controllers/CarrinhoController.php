@@ -110,4 +110,5 @@ class CarrinhoController extends Controller
        $req->Session()->flash('mensagem-sucesso','produto removido do carrinho com sucesso!');
        return redirect()->route('carrinho.index'); 
     }
+    
 }

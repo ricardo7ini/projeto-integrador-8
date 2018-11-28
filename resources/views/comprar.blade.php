@@ -60,7 +60,7 @@
               <div class="btn-parcela">
               <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle btn-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img class="btn-img-parcela" src=" {{ url('storage/imagens/site/btn-pagseguro-cards.png') }}" ><span>Parcelas</span>
+                      <img class="btn-img-parcela" src=" {{ url('imagens/site/btn-pagseguro-cards.png') }}" ><span>Parcelas</span>
                   </button>
                   <div class="dropdown-menu dropdown-menu-custom" aria-labelledby="dropdownMenuButton">
                       <ul>

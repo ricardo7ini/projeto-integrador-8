@@ -26,6 +26,8 @@ Route::prefix('holly')->group(function()
     Route::get('/carrinho/adicionar', function() {return redirect()->route('index');});
     Route::post('/carrinho/adicionar', 'CarrinhoController@adicionar')->name('Carrinho.adicionar');
     Route::delete('/carrinho/remover', 'CarrinhoController@remover')->name('Carrinho.remover');
+    Route::post('/carrinho/concluir','CarrinhoController@concluir')->name('carrinho.concluir');
+    Route::get('/carrinho/compras','CarrinhoController@compras')->name('carrinho.compras');
  
     
     //Rotas de login e sauth
