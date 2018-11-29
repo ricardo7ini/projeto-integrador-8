@@ -17,9 +17,8 @@ class ProdutosControler extends Controller
     public function index()
     {
         $produtos = produto::get();
-        return view('cms.crudProdutos',compact('produtos'));
+        return view('cms.admin.janelas.crudProdutos',compact('produtos'));
         
-    
     }
    
     /**

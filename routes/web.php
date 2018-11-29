@@ -43,10 +43,13 @@ Route::prefix('holly')->group(function()
     //rotas do formulario de busca
     Route::post('/pesquisa','ListarProdutos@busca');
     Route::post('/categoria','ListarProdutos@categoria');
-    Route::resource('produtos', 'ProdutosControler');
     
+    //rotas admin CMS´S
+    Route::get('/admin','DashboardController@index')->name('dashboard.index');
+    Route::resource('/admin/produtos','ProdutosControler');
+
+    Route::get('/admin/categorias','CategoriaController@index')->name('categoria.index');
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
