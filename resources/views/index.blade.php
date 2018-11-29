@@ -102,7 +102,8 @@
 							</div>
 						<div class="comprar-produto">
 							<div class="comprar-produto">
-								<a class="btn-vermais" href="{{ route('produto.exibir',$produto->id) }}" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+								<a class="btn-vermais" href="{{ route('produto.exibir',$produto->id) }}" 
+								data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
 									Ver mais</a>
 						</div>
 						</div>
@@ -125,7 +126,7 @@
 						
 			
 			<li>
-					<div class=" col-lg-3 col-md-3 col-sm-6 col-xm-12">
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xm-12" >
 					<div class="produto-box">
 						<img width="270" height="270" class="produto-img" src="{{ asset('storage/'.str_after( $produto_destaque->imgFrente,'public/')) }}">
 						<img width="270" height="270" class="img-costa" src="{{ asset('storage/'.str_after( $produto_destaque->imgCosta,'public/')) }}">
@@ -152,7 +153,8 @@
 								até <span>3x</span> de <span>R$ {{ number_format($produto_destaque->preco/3, 2) }}</span> sem juros ou <br><span>R$ {{number_format($produto_destaque->preco, 2) }}</span> via Depósito
 								</div>
 							<div class="comprar-produto">
-											<a class="btn-vermais" href="{{ route('produto.exibir',$produto_destaque->id) }}" data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
+											<a class="btn-vermais" href="{{ route('produto.exibir',$produto_destaque->id) }}" 
+											data-dalay="50" data-toggle="tooltip" title="O produto será adicionado ao seu carrinho" style="border:none;">
 												Ver mais</a>
 							</div>
 							</div>

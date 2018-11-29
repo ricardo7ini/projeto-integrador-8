@@ -78,6 +78,11 @@
                 <textarea class="form-control"  name="descricao" rows="3"></textarea>
 
             </div>
+            <div class="form-group">
+                <label for="categoria">Categoria do produto</label>
+                <input type="text" class="form-control"  name="categoria" placeholder="Categoria do produto. ex: camiseta...."></input>
+
+            </div>
              <div class="form-group">
               <label for="imgFrente">img frente*(obrigatório)</label>
               <input name="imgFrente" type="file" class="form-control" >
@@ -101,6 +106,7 @@
               <tr>
                 <th scope="col">id Produtos</th>
                 <th scope="col">Nome</th>
+                <th scope="col">Categoria</th>
                 <th scope="col">Descrição</th>
                 <th scope="col">preço R$</th>
                 <th scope="col">Ações</th>
@@ -112,6 +118,7 @@
               <th scope="row">{{ $produto->id }}</th>
   
                   <td>{{ $produto->nome }}</td>
+                  <td>{{ $produto->categoria }}</td>
                   <td>{{ $produto->descricao }}</td>
                   <td>{{ $produto->preco }}</td>
               <td><form action="{{ route('produtos.destroy',$produto->id) }}" method="POST">

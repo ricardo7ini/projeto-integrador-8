@@ -89,7 +89,7 @@
                                         data-toggle="tooltip" title="Adquirir produtos concluindo a compra?"
                                         style="width:250px; height:50px; padding:15px; background-color:black; border:none; margin:2px;">Cocluir compras</button> 
 
-                                 </form> --}}
+                            </form> --}}
                         </div>
             </div>
             
