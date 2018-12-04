@@ -18,8 +18,9 @@
 Route::prefix('holly')->group(function()
 {
     Route::resource('/', 'ListarProdutos');
-    Route::get('/comprar/{id}', function($id){$produto = App\produto::find($id);return view('comprar',compact('produto'));   
-    })->name('produto.exibir')->where(['id'=>'[0-9]+']);
+
+    Route::get('/comprar/{id}', function($id){$produto = App\produto::find($id);
+    return view('comprar',compact('produto'));})->name('produto.exibir')->where(['id'=>'[0-9]+']);
 
     //rota do carrinho de compras 
     Route::get('/carrinho', 'CarrinhoController@index')->name('carrinho.index');
@@ -47,8 +48,14 @@ Route::prefix('holly')->group(function()
     //rotas admin CMS´S
     Route::get('/admin','DashboardController@index')->name('dashboard.index');
     Route::resource('/admin/produtos','ProdutosControler');
-
     Route::get('/admin/categorias','CategoriaController@index')->name('categoria.index');
+
+    //Rotas Sobre
+    Route::get('/sobre', function () {return view('sobre');})->name('holly.sobre');
+    //politicas de privacidades
+    Route::get('/politicas', function () {return view('politicas');})->name('holly.politicas');
+    //politica de troca
+    Route::get('/trocas', function () {return view('troca');})->name('holly.troca');
 });
 
 Auth::routes();

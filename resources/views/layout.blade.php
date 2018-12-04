@@ -31,8 +31,8 @@
                     <div class="row row1">
                         <ul class="largenav pull-right">
                             <li class="upper-links"><a class="links" href="{{ url('holly') }}">Home</a></li>
-                            <li class="upper-links"><a class="links" href="#">Sobre</a></li>
-                            <li class="upper-links"><a class="links" href="#">Contato</a></li>
+                        <li class="upper-links"><a class="links" href="{{ route('holly.sobre') }}">Sobre</a></li>
+                            {{-- <li class="upper-links"><a class="links" href="#">Contato</a></li> --}}
                             <li class="upper-links"><a class="links" href="#"></a></li>
                             
                                 @guest
@@ -43,16 +43,13 @@
                                         </svg>
                                     </a>
                                 </li>
-                              <li class="upper-links dropdown"><a class="nav-link links" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                
-                                <ul class="dropdown-menu">
-                                    <li class="profile-li">
-                                        @if (Route::has('register'))
-                                          <a class="nav-link links" href="{{ route('register') }}">{{ __('Cadastrar') }}</a>
-                                        @endif
-                                      </li>
-                                    </ul>
-                                
+                              <li class="upper-links ">
+                                    <a class="nav-link links" href="{{ route('login') }}">{{ __('Login') }}</a> |
+                                @if (Route::has('register'))
+                                    <a class="nav-link links" href="{{ route('register') }}">{{ __('Cadastrar') }}</a>
+                                @endif
+                                </li>
+   
                             @else
                             <li class="upper-links"><a class="links" href="#">Meus dados</a></li>
                             <li class="upper-links"><a class="links" href="#">Meus pedidos</a></li>
@@ -115,7 +112,7 @@
                                 <svg class="cart-svg " width="16 " height="16 " viewBox="0 0 16 16 ">
                                   <i class="fas fa-1x fa-shopping-cart"></i>
                                 </svg>
-                                <span class="item-number ">0</span>
+                                <span class="item-number "> Compras</span>
                             </a>
                         </div>
       
@@ -322,12 +319,12 @@
                             <span class="title-footer">CONTEÚDO</span>
                         </div>
                         <ul class="list-footer">
-                          <li><a href="#">Fale Conosco</a></li>
+                          {{-- <li><a href="#">Fale Conosco</a></li> --}}
                         <li><a href="{{ route('duvidas') }}">Faq</a></li>
                        
-                          <li><a href="#">Política de privacidade</a></li>
-                          <li><a href="#">Política de trocas</a></li>
-                          <li><a href="#">Sobre nós</a></li>
+                        <li><a href="{{ route('holly.politicas') }}">Política de privacidade</a></li>
+                        <li><a href="{{ route('holly.troca') }}">Política de trocas</a></li>
+                        <li><a href="{{ route('holly.sobre') }}">Sobre nós</a></li>
                         </ul>
                       </div>
                 
@@ -340,7 +337,6 @@
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Linkdin</a></li>
                         <li><a href="#">Twitter</a></li>
-                        <li><a href="#">whatsapp</a></li>
                         </ul>
                       </div>       
         </div>

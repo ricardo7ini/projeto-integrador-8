@@ -20,7 +20,7 @@
      
     @endif
     @if(  session('erro')  )
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-danger" role="alert">
         {{ session('erro') }}
     </div>
    
@@ -43,38 +43,39 @@
         {{ session('deletado') }}
     </div>
     @endif
-
-      <form action="{{ route('produtos.store') }}" enctype="multipart/form-data" method="POST">
+    
+    <ul class="alerta" id="erros" name="erros"></ul>
+      <form id="form" action="{{ route('produtos.store') }}" enctype="multipart/form-data" method="POST">
           @csrf
           <div class="form-group">
             <label for="nome">Nome do Produto*(obrigatório)</label>
-            <input name="nome" type="text" class="form-control nome-list"  placeholder="Nome do produto">
+            <input id="nome" name="nome" type="text" class="form-control nome-list"  placeholder="Nome do produto">
           </div>
         
           <div class="form-group">
               <label for="descricao">Descrição do produto</label>
-              <textarea class="form-control nome-list"  name="descricao" rows="3"></textarea>
+              <textarea id="descricao" class="form-control nome-list"  name="descricao" rows="3"></textarea>
 
           </div>
           <div class="form-group">
               <label for="categoria">Categoria do produto</label>
-              <input type="text" class="form-control nome-list"  name="categoria" placeholder="Categoria do produto. ex: camiseta...."></input>
+              <input id="categoria" type="text" class="form-control nome-list"  name="categoria" placeholder="Categoria do produto. ex: camiseta...."></input>
 
           </div>
            <div class="form-group">
             <label for="imgFrente">img frente*(obrigatório)</label>
-            <input name="imgFrente" type="file" class="form-control nome-list" >
+            <input id="imgFrente" name="imgFrente" type="file" class="form-control nome-list" >
           </div>
           <div class="form-group">
               <label for="imgCosta">img costas*(obrigatório)</label>
-              <input name="imgCosta" type="file" class="form-control nome-list" >
+              <input id="imgCosta" name="imgCosta" type="file" class="form-control nome-list" >
             </div>
           <div class="form-group">
               <label for="preco">preço em R$*(obrigatório)</label>
-              <input type="number" step="0.01" class="form-control nome-list" name="preco">
+              <input id="preco" type="number" step="0.01" class="form-control nome-list" name="preco">
           </div>
           <div class="text-center">
-              <button type="submit" class="btn btn-success nome-list">Cadastrar</button>
+              <button id="btn" type="submit" class="btn btn-success nome-list">Cadastrar</button>
             </div> 
           
         </form>
