@@ -56,6 +56,11 @@ Route::prefix('holly')->group(function()
     Route::get('/politicas', function () {return view('politicas');})->name('holly.politicas');
     //politica de troca
     Route::get('/trocas', function () {return view('troca');})->name('holly.troca');
+
+    //Rota para alterar a estilo do tema
+    Route::get('/altera-tema', function () {
+        return view('cms.admin.janelas.tema');
+    });
 });
 
 Auth::routes();

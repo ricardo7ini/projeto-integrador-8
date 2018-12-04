@@ -6,10 +6,26 @@ $(document).ready(function(){
         $("").toggle();
     });
 
-    $("#zoom_09").elevateZoom({
-       easing : true
-    });
+    // $("#zoom_09").elevateZoom({
+    //    easing : true
+    // });
 
+    //Sprint 6 seleção dos estados
+    $('#pais').change(function(){
+
+        var pais = $('#pais').val();
+        
+        if(pais != ""){
+            if(pais == "Brasil"){
+                $('#estado').attr("type", "text");
+            }
+        }else{
+            $('#estado').attr("type", "hidden");
+        }
+    });
+        
+    
+   
 });
 
 function openNav() {

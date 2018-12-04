@@ -7,7 +7,16 @@
 html body
 {
     height: 100vh;
-
+}
+body{
+  width: 100%;
+}
+.brand>a{
+  text-decoration: none;
+  color: #fdcb6e;
+}
+.brand>a:hover{
+  color: #ff7675;
 }
 .conainter-admin
 {
@@ -15,6 +24,7 @@ html body
     height: 100%;
     float: right;
     display: block;
+    zoom: 1.29;
   
 }
 label{
@@ -177,8 +187,5 @@ label{
       display: block;
     }
   }
-  body {
-    margin: 0px;
-    padding: 0px;
-  }
+  
   

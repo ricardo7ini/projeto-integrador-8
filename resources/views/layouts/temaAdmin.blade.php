@@ -23,7 +23,7 @@
 <body>
   @section('menu')
   <nav class="nav-side-menu">
-      <div class="brand">HOLLY</div>
+  <div class="brand"><a  href="{{ url('holly') }}">HOLLY</a></div>
       <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
     
           <div class="menu-list">
@@ -48,7 +48,7 @@
                       <li><a href="#">Slider</a></li>
                       <li><a href="#">Panels</a></li>
                       <li><a href="#">Widgets</a></li>
-                      <li><a href="#">Bootstrap Model</a></li>
+                      <li><a href="#">Tema</a></li>
                   </ul>
   
   

@@ -59,7 +59,38 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
+                        <!-- Sprint 6 escolher pais-->
+                        <div class="form-group row">
+                            <label for="" class="col-md-4 col-form-label text-md-right">Escolher país</label>
+                            <div class="col-md-6">
+                                
+                                    <input class="form-control" list="lista-pais" name="pais" id="pais">
+                                    <datalist id="lista-pais">
+                                        <option value="Brasil">   
+                                    </datalist>
 
+                                    <input  type="hidden" class="form-control" list="lista-estado" name="estado" id="estado">
+                                    <datalist id="lista-estado">
+                                            <option value="Acre">
+                                            <option value="Bahia">
+                                            <option value="Ceará">
+                                            <option value="Distrito Federal">
+                                            <option value="Espírito Santo">
+                                            <option value="Goiás">
+                                            <option value="Maranhão">
+                                            <option value="Pará">
+                                            <option value="Rio de Janeiro">
+                                            <option value="São Paulo">
+                                            <option value="Tocantins">
+                                    </datalist>
+                            </div>
+                            
+                                
+                              
+                            
+
+                        </div>
+                        
                         <div class="form-group row mb-0">
                                 <div class="col-md-offset-1 col-sm-10">
                                 <button type="submit" class="btn btn-default btn-default-custom">
