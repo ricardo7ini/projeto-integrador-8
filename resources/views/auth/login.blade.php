@@ -58,6 +58,13 @@
                             </div>
                         </div>
                     </form>
+                    <p>
+                            Ainda não tem sua conta?
+                    </p>
+                   
+                    <a href="{{url('/register')}}" class="btn btn-default btn-default-custom">
+                            Cadastrar
+                    </a>
                     <div class="row text-center">
                             <legend class="legenda">Fazer login com:</legend>
                             <a class="icons-socials" href="#"><img src="{{ url('imagens/icons/facebook-holly.png') }}"></a>

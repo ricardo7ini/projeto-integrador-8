@@ -60,32 +60,24 @@
                             </div>
                         </div>
                         <!-- Sprint 6 escolher pais-->
+                        
                         <div class="form-group row">
-                            <label for="" class="col-md-4 col-form-label text-md-right">Escolher país</label>
+                            {{-- <label for="" class="col-md-4 col-form-label text-md-right">Escolher país</label> --}}
+                            <label for="estado" class="col-md-4 col-form-label text-md-right">estado</label>
                             <div class="col-md-6">
                                 
-                                    <input class="form-control" list="lista-pais" name="pais" id="pais">
-                                    <datalist id="lista-pais">
-                                        <option value="Brasil">   
-                                    </datalist>
-
-                                    <input  type="hidden" class="form-control" list="lista-estado" name="estado" id="estado">
-                                    <datalist id="lista-estado">
-                                            <option value="Acre">
-                                            <option value="Bahia">
-                                            <option value="Ceará">
-                                            <option value="Distrito Federal">
-                                            <option value="Espírito Santo">
-                                            <option value="Goiás">
-                                            <option value="Maranhão">
-                                            <option value="Pará">
-                                            <option value="Rio de Janeiro">
-                                            <option value="São Paulo">
-                                            <option value="Tocantins">
-                                    </datalist>
+                                <select name="estado" class="form-control" id="estado" class="form-control"></select>
+               
                             </div>
                             
-                                
+                            <div class="form-group">
+
+                                    <label for="cidade" class="col-md-4 col-form-label text-md-right">cidade</label>
+                                    <div class="col-md-6">
+                                    <select name="cidade" class="form-control" id="cidade" class="form-control"></select>
+                                    </div>
+    
+                                </div>
                               
                             
 

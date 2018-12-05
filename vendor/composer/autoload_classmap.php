@@ -41,6 +41,7 @@ return array(
     'App\\User' => $baseDir . '/app/User.php',
     'App\\categoria' => $baseDir . '/app/categoria.php',
     'App\\cliente' => $baseDir . '/app/cliente.php',
+    'App\\cofigTema' => $baseDir . '/app/cofigTema.php',
     'App\\pedido' => $baseDir . '/app/pedido.php',
     'App\\pedido_produto' => $baseDir . '/app/pedido_produto.php',
     'App\\produto' => $baseDir . '/app/produto.php',

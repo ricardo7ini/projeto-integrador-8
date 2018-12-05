@@ -391,6 +391,7 @@ class ComposerStaticInit0e3759c6a41e0a94e364ae6d1b7bf7d2
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'App\\categoria' => __DIR__ . '/../..' . '/app/categoria.php',
         'App\\cliente' => __DIR__ . '/../..' . '/app/cliente.php',
+        'App\\cofigTema' => __DIR__ . '/../..' . '/app/cofigTema.php',
         'App\\pedido' => __DIR__ . '/../..' . '/app/pedido.php',
         'App\\pedido_produto' => __DIR__ . '/../..' . '/app/pedido_produto.php',
         'App\\produto' => __DIR__ . '/../..' . '/app/produto.php',

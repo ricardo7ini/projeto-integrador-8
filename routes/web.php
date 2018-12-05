@@ -49,6 +49,8 @@ Route::prefix('holly')->group(function()
     Route::get('/admin','DashboardController@index')->name('dashboard.index');
     Route::resource('/admin/produtos','ProdutosControler');
     Route::get('/admin/categorias','CategoriaController@index')->name('categoria.index');
+    Route::get('/tema-config', 'DashboardController@configTemaIndex')->name('config.tema');
+    Route::post('/tema-config', 'DashboardController@config_tema');
 
     //Rotas Sobre
     Route::get('/sobre', function () {return view('sobre');})->name('holly.sobre');
