@@ -14,8 +14,9 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<!-- Use Font Awesome's  -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-		<!-- css geral -->
-		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <!-- css geral -->
+        <link rel="alternate stylesheet" href="{{ asset('css/style-alternativo.css') }}" title="blue">
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}" title="standard">
 		<!-- Só carrega esse estilo se for a pagina comprar.php -->
 		<link rel="stylesheet" href="{{ asset('css/compra-style.css') }}">
 		<!-- Include the above in your HEAD tag  -->
@@ -29,8 +30,11 @@
             <div class="flipkart-navbar">
                 <div class="container">
                     <div class="row row1">
+
+                       
+
                         <ul class="largenav pull-right">
-                            <li class="upper-links"><a class="links" href="{{ url('holly') }}">Home</a></li>
+                        <li class="upper-links"><a class="links" href="{{ url('holly') }}">Home</a></li>
                         <li class="upper-links"><a class="links" href="{{ route('holly.sobre') }}">Sobre</a></li>
                             {{-- <li class="upper-links"><a class="links" href="#">Contato</a></li> --}}
                             <li class="upper-links"><a class="links" href="#"></a></li>
@@ -340,7 +344,7 @@
                         </ul>
                       </div>       
         </div>
-                <div class="row">
+                <div class="row rodape-pagamento">
                         <div class="coi-lg-6 col-md-6 col-sm-12">
                           <div class="" id="forma-pagamento" style="margin-bottom: 30px;">
                             <span class="title-footer">Pague Com</span>
@@ -354,6 +358,11 @@
                                 </div>
                               </div>
                       </div>
+                      <ul class="largenav text-center">
+                            <p>Alterar tema</p>
+                            <li class="upper-links"><a href="#" onclick="setActiveStyleSheet('standard'); return false; ">Dark</a></li>
+                            <li class="upper-links"><a href="#" onclick="setActiveStyleSheet('blue'); return false;">clean</a></li>
+                    </ul>
                       <div class="text-center copy" >
                             <a href="#">© 2018 Company HOLLY.</a></li>
                         </div>

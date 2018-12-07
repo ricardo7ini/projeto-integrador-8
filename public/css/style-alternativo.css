@@ -17,7 +17,7 @@ body,html{height: 100vh;}
 
 /*menu*/
 .flipkart-navbar {
-    background-color: #000;
+    background-color: #66A1F1;
     color: #FFFFFF;
 }
 
@@ -51,8 +51,7 @@ body,html{height: 100vh;}
 }
 
 .cart-button {
-    background-color: #000;
-    box-shadow: 0 2px 4px 0 #ffffff45, inset 2px 2px 0 0 hsla(0, 0%, 100%, .2);
+    background-color: #66A1F1;
     padding: 10px 0;
     text-align: center;
     height: 41px;
@@ -93,7 +92,9 @@ body,html{height: 100vh;}
     line-height: 12px;
     margin-left: 10px;
 }
-
+.rodape-pagamento{
+    display: none;
+}
 .upper-links {
     display: inline-block;
     padding: 0 11px;
@@ -232,13 +233,13 @@ body,html{height: 100vh;}
 .logo{
     font-family: 'Fjalla';
     font-size: 45px;
-    color: #fff;
+    color: #F0F0F0;
     text-decoration: none;
     
 }
 .logo:hover{
   text-decoration: none;
-  color: #d2af2c;
+  color: rgba(255,255,255,.15);
 }
 .navbar-default .navbar-nav > li > a {
     color: #FFF;
@@ -375,7 +376,7 @@ hr {
     height: .20rem;
     width: 16.6%;
     margin: 0;
-    background: #f09b1a;
+    background: #66A1F1;
     border: none;
     transition: .3s ease-in-out;
 }
@@ -659,7 +660,7 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #000;
+        background-color: #66A1F1;
         height: 40px;
         width: 100%;
 
